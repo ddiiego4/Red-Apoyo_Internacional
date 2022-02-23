@@ -1,10 +1,16 @@
-import React, { useEffect }from 'react'
-import $ from 'jquery'
+import React, { useEffect, useState } from "react";
+
+import { BiMenuAltRight } from "react-icons/bi";
+import { AiOutlineClose } from "react-icons/ai";
+
+import { Link, useHistory } from "react-router-dom";
 import './Header.css';
 
 const Header = () => {
+   
 
    
+
     return (
         <>
         <header className="header_col" id="header_color">
@@ -33,9 +39,12 @@ const Header = () => {
 
                         </ul>
                     </nav>
+                    <div>
+                
+                </div>
                 </div>
             </header></>
     )
 }
 
-export default Header
+export default Header;

@@ -2,96 +2,38 @@ import React, { useEffect } from 'react';
 import 'bootstrap'
 import 'reactstrap'
 import $ from 'jquery'
-import './Carousel.css';
+import './Carousell.css';
 
 const Carousel = () => {
 
-    useEffect( () => {
-        $('carousel').carousel();
-     },[]
-     )
+  useEffect (  () => {
+
+  }, [])
 
     return (
-        <Carousel
-        activeIndex={0}
-        dark
-        next={function noRefCheck(){}}
-        previous={function noRefCheck(){}}
-      >
-        <CarouselIndicators
-          activeIndex={0}
-          items={[
-            {
-              altText: 'Slide 1',
-              caption: 'Slide 1',
-              key: 1,
-              src: 'https://picsum.photos/id/123/1200/600'
-            },
-            {
-              altText: 'Slide 2',
-              caption: 'Slide 2',
-              key: 2,
-              src: 'https://picsum.photos/id/456/1200/600'
-            },
-            {
-              altText: 'Slide 3',
-              caption: 'Slide 3',
-              key: 3,
-              src: 'https://picsum.photos/id/678/1200/600'
-            }
-          ]}
-          onClickHandler={function noRefCheck(){}}
-        />
-        <CarouselItem
-          onExited={function noRefCheck(){}}
-          onExiting={function noRefCheck(){}}
-        >
-          <img
-            alt="Slide 1"
-            src="https://picsum.photos/id/123/1200/600"
-          />
-          <CarouselCaption
-            captionHeader="Slide 1"
-            captionText="Slide 1"
-          />
-        </CarouselItem>
-        <CarouselItem
-          onExited={function noRefCheck(){}}
-          onExiting={function noRefCheck(){}}
-        >
-          <img
-            alt="Slide 2"
-            src="https://picsum.photos/id/456/1200/600"
-          />
-          <CarouselCaption
-            captionHeader="Slide 2"
-            captionText="Slide 2"
-          />
-        </CarouselItem>
-        <CarouselItem
-          onExited={function noRefCheck(){}}
-          onExiting={function noRefCheck(){}}
-        >
-          <img
-            alt="Slide 3"
-            src="https://picsum.photos/id/678/1200/600"
-          />
-          <CarouselCaption
-            captionHeader="Slide 3"
-            captionText="Slide 3"
-          />
-        </CarouselItem>
-        <CarouselControl
-          direction="prev"
-          directionText="Previous"
-          onClickHandler={function noRefCheck(){}}
-        />
-        <CarouselControl
-          direction="next"
-          directionText="Next"
-          onClickHandler={function noRefCheck(){}}
-        />
-      </Carousel>
+      <div className="container_carousel">
+       <div id="carouselExampleSlidesOnly" className="carousel slide" data-ride="carousel" >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img className="d-block w-100" src="https://sp-ao.shortpixel.ai/client/q_glossy,ret_img/https://paisapues.com/wp-content/gallery/bosko/1_55861154_767400236977838_1672752997148393472_n.jpg" alt="First slide"/>
+            </div>
+            <div className="carousel-item">
+              <img className="d-block w-100" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/a9/fa/02/enjoy-the-arizona-sunrise.jpg?w=1100&h=-1&s=1" alt="Second slide"/>
+            </div>
+            <div className="carousel-item">
+              <img className="d-block w-100" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/a9/fa/02/enjoy-the-arizona-sunrise.jpg?w=1100&h=-1&s=1" alt="Third slide"/>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#second slide" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
     );
 }
 

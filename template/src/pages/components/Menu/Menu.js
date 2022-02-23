@@ -12,7 +12,8 @@ const redirect = () => {
 }
 
 
-class Menu extends Component {
+class Menu extends Component {    
+
     cerrarSesion = () => {
         cookies.remove('id', { path: "/" });
         cookies.remove('apellido_paterno', { path: "/" });
@@ -42,8 +43,8 @@ class Menu extends Component {
                 <br />
                 <br />
                 <div>
-                    <div className="container_carousel_principal">
-                        <Carousel></Carousel>
+                    <div className="container_carousel_principal">                      
+                        <Carousel />
                     </div>
                 </div>
                 <div>
@@ -52,7 +53,7 @@ class Menu extends Component {
                     <div className="li_button">
                         <button className="btn btn-primary" type="button" onClick={() => redirect()}>Log In</button>
                     </div>
-                    <button onClick={() => this.cerrarSesion()}>Cerrar Sesión</button>
+                    <button className="btn btn-secondary" type="button" onClick={() => this.cerrarSesion()}>Cerrar Sesión</button>
                 </div>
                 <div>
                     <Footer />
