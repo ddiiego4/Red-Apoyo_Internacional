@@ -4,7 +4,7 @@ import Input from '../Input/Input';
 import Label from '../Label/Label';
 import './Form.css'
 
-const Form = ({handleSubmit, handleChange, CrearUsuario, setErr, form}) => {
+const Form = ({handleSubmit, handleChange, CrearUsuario, setLoading, setForm, setErr, form}) => {
     
     return(
         <div className="Formulario_inputs">
@@ -13,7 +13,7 @@ const Form = ({handleSubmit, handleChange, CrearUsuario, setErr, form}) => {
             <div className="In_puts">
                 <Input atributo={{
                     id:'user_name',
-                    name:'user_name',
+                    name:'nombre',
                     type:'text',
                     placeholder:'Ingrese su Nombre',
                     onChange:handleChange
@@ -25,7 +25,7 @@ const Form = ({handleSubmit, handleChange, CrearUsuario, setErr, form}) => {
             <div className="In_puts" >
                 <Input atributo={{
                     id:'user_lastname',
-                    name:'user_lastname',
+                    name:'apellido',
                     type:'text',
                     placeholder:'Ingrese su Apellido',
                     onChange:handleChange
@@ -73,7 +73,7 @@ const Form = ({handleSubmit, handleChange, CrearUsuario, setErr, form}) => {
             <div className="buttons">
                 <button
                     className="btn btn-primary"
-                    onClick={CrearUsuario(form, setErr, )}>Registrar
+                    onClick={() => CrearUsuario(form, setErr, setForm,setLoading)}>Registrar
                 </button>
             </div>
         </form>

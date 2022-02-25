@@ -24,8 +24,6 @@ const Header = () => {
                     </form>
                 </div>
 
-
-
                 <div class="nav_principal">
                     <nav className="sections">
                         <ul>

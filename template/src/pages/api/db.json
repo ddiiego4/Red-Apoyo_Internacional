@@ -1,28 +1,28 @@
 {
   "usuarios": [
     {
-      "id": 1,
+      "nombre": "JUAN",
+      "apellido": "DUQ",
+      "Fecha_Nacimiento": "UE",
+      "username": "AS",
+      "password": "SA",
+      "id": 1645770946368
+    },
+    {
+      "nombre": "AA",
+      "apellido": "AA",
+      "Fecha_Nacimiento": "AA",
+      "username": "AA",
+      "password": "AA",
+      "id": 1645771027530
+    },
+    {
+      "nombre": "Andres",
       "apellido": "Duque",
-      "nombre": "juan",
+      "Fecha_Nacimiento": "2021/20/2",
       "username": "dkb4rb",
-      "password": "Holas1",
-      "mssg": "Holas"
-    },
-    {
-      "id": 2,
-      "apellido": "Agudelo",
-      "nombre": "Diego",
-      "username": "dkb4rb1",
-      "password": "Holas2",
-      "mssg": "Holas"
-    },
-    {
-      "id": 3,
-      "apellido": "Giraldo",
-      "nombre": "Carlos",
-      "username": "dkb4rb2",
-      "password": "Holas3",
-      "mssg": "Holas"
+      "password": "dkajdkadj",
+      "id": 1645773356106
     }
   ],
   "Houses": [
