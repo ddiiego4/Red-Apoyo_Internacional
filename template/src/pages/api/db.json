@@ -1,28 +1,13 @@
 {
   "usuarios": [
     {
-      "nombre": "JUAN",
-      "apellido": "DUQ",
-      "Fecha_Nacimiento": "UE",
-      "username": "AS",
-      "password": "SA",
-      "id": 1645770946368
-    },
-    {
-      "nombre": "AA",
-      "apellido": "AA",
-      "Fecha_Nacimiento": "AA",
-      "username": "AA",
-      "password": "AA",
-      "id": 1645771027530
-    },
-    {
-      "nombre": "Andres",
-      "apellido": "Duque",
-      "Fecha_Nacimiento": "2021/20/2",
+      "nombre": "Juan",
       "username": "dkb4rb",
-      "password": "dkajdkadj",
-      "id": 1645773356106
+      "password": "Holas123*",
+      "apellido": "Colombia",
+      "city": "Medellin",
+      "user_addres": "Calle 93B # 34-50",
+      "id": 1646528792819
     }
   ],
   "Houses": [

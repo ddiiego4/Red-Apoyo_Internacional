@@ -1,45 +1,74 @@
 import React, { useEffect, useState } from "react";
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Dropdown from "../Dropdown/Dropdown";
+import Cookies from "universal-cookie";
 
-import { BiMenuAltRight } from "react-icons/bi";
-import { AiOutlineClose } from "react-icons/ai";
-
-import { Link, useHistory } from "react-router-dom";
 import './Header.css';
+const cookies = new Cookies();
 
-const Header = () => {
-   
+const Header = ({manage_states, username }) => {
 
-   
+    const [Clic_perfil, setClic_perfil] = useState(false);
+
+    function clic_perfil() {
+        if (!Clic_perfil) {
+            setClic_perfil(true);
+        } else {
+            setClic_perfil(false);
+        }
+    }
+
+
 
     return (
         <>
-        <header className="header_col" id="header_color">
+            <header className="header_col" id="header_color">
                 <div className="logo_navbar">
                 </div>
 
-                <div>
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></input>
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"></button>
+                <div className="control_btn_search">
+                    <div className="head_btns">
+                        <nav className="sections">
+                            <div class="btn-group" role="group" aria-label="Basic outlined example">
+                                <button onClick={() => manage_states("menu")} type="button" class="btn btn-outline-primaryy">Inicio</button>
+                                <button onClick={() => manage_states("publicar")} type="button" class="btn btn-outline-primaryy">Publicar</button>
+                                <button type="button" class="btn btn-outline-primaryy">Buscar Por Mapa</button>
+                            </div>
+                        </nav>
+                    </div>
+
+                    <form type="submit" class="form-inline my-2 my-lg-0">
+                        <div class="input-group rounded">
+                            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                            <span class="input-group-text border-0" id="search-addon">
+                                <i class="gg-search"></i>
+                            </span>
+                        </div>
                     </form>
+
                 </div>
 
-                <div class="nav_principal">
+                <div class="nav_principall">
                     <nav className="sections">
                         <ul>
-                            <li>
-                                <a className="aref" href="./home">Inicio</a>
-                            </li>
-
-                            <li>
-                                <div className="usr_btn_menu" href="./home"></div>
-                            </li>
-
+                                <li>
+                                    <div className="aref" href="#">{username}</div>
+                                </li>
+                            <div className="aref_back" onClick={clic_perfil}>
+                                <i  className="aref_back_list_icon" class="bi bii-list"  ></i>
+                                <li>
+                                    
+                                        <button className="btn usr_btn_menu" ></button>
+                                        {Clic_perfil && <Dropdown /> }
+                                  
+                                </li>
+                            </div>
                         </ul>
                     </nav>
                     <div>
-                
-                </div>
+
+                    </div>
                 </div>
             </header></>
     )
