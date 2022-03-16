@@ -1,0 +1,14 @@
+.icon-test {
+    font-size: 61px;
+}
+
+.card-img{
+    border-radius: 5px;
+    zoom: 1;
+}
+
+.ValueHouse{
+    display: inline-flex;
+    text-align: center;
+    place-self: center;
+}
