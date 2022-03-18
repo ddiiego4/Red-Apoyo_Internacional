@@ -4,6 +4,7 @@ import Houses from "./Houses/Houses";
 import './Hous.css'
 
 const DbUrl="http://localhost:3002/Houses";
+const DbUrl2="https://isnft-prod.azurewebsites.net/api/houses";
 
 
 export default class Hous extends Component {
@@ -15,6 +16,8 @@ export default class Hous extends Component {
 
     componentDidMount(){
         axios.get(DbUrl).then(res =>{
+            //console.log("VIene la data");
+            //console.log(res.data.result);
             this.setState({Houses : res.data});
         });
     }
