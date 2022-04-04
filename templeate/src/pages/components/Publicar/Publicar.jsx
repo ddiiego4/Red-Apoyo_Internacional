@@ -1,142 +1,157 @@
-import React from "react";
+import React, { useState } from "react";
+import { ReactDOM } from "react";
+import Select from "../Select/Select";
 
-import Input from '../Input/Input';
+import Input from "../Input/Input";
 import Title from "../Title/Title";
 import axios from "axios";
-import './Publicar.css'
+import "./Publicar.css";
+
+import Rent from "../../../assets/img/Public/Rent.png";
 
 import CreateHouse from "../../helpers/helpCreateHouse";
-
-const DbUrl="http://localhost:3002/Houses";    
-
-const Publicar = ({ handleSubmit, handleChange,  setLoading, setForm, setErr, form, page_name }) => {
+import InputCheck from "../InputCheck/InputCheck";
+import Loader from "../Loader/Loader";
 
 
+const DbUrl = "http://localhost:3003/Houses";
 
-    return (
-        <div className="container_publicar">
-            <div className="Formulario_inputs">
+const Publicar = ({
+  handleSubmit,
+  handleChange,
+  setLoading,
+  setForm,
+  setErr,
+  form,
+  setPublicar,
+  Publica,
+  page_name,
+}) => {
 
-                <Title title={page_name} />
+  const [Load, setLoad] = useState(false);
 
+  function public_house(form, setErr, setForm, setPublicar, Publica) {
+    CreateHouse(form, setErr, setForm);
+    console.log(Publica);
 
-                <form onSubmit={handleSubmit}>
-                
-                <div className="In_puts">
-                        <Input atributo={{
-                            id: 'name_pub',
-                            name: 'nombre',
-                            type: 'text',
-                            placeholder: 'Nombra Tu Publicacion',
-                            onChange: handleChange
+    setLoad(true);
+    setTimeout(() => {
+      setLoad(false);
+    }, 2000);
+  }
 
-                        }}
+  return (
+    <div className="container_publicar">
+      <div className="Load_p">
+      {Load && <Loader />}
+      </div>
+      <div className="Formulario_inputs">
+        <Title title={page_name} />
 
-                        /><br></br>
-                    </div>
+        <form onSubmit={handleSubmit} className="form_dist">
+          <div className="rent">
+            <img src={Rent} alt="Rentar_Hogar"></img>
+          </div>
 
-                    <div className="In_puts">
-                        <Input atributo={{
-                            id: 'status',
-                            name: 'Estado',
-                            type: 'number',
-                            placeholder: 'Disponibilidad',
-                            onChange: handleChange
-
-                        }}
-
-                        /><br></br>
-                    </div>
-                    <div className="In_puts" >
-
-                        <Input atributo={{
-                            id: 'Contact',
-                            name: 'Telefono',
-                            type: 'tel',
-                            placeholder: 'Telefono',
-                            onChange: handleChange
-
-                        }}
-                        /><br></br>
-                    </div>
-                    <div className="In_puts">
-                        <Input atributo={{
-                            id: 'pais',
-                            name: 'Pais',
-                            type: 'text',
-                            placeholder: 'Pais',
-                            onChange: handleChange
-
-                        }}
-                        />
-                        <br />
-                        <br />
-                    </div>
-
-                    <div className="In_puts" >
-                        <Input atributo={{
-                            id: 'City',
-                            name: 'Ciudad',
-                            type: 'text',
-                            placeholder: 'Ciudad',
-                            onChange: handleChange
-
-                        }}
-                        /><br></br>
-
-                    </div>
-
-                    <div className="In_puts" >
-                        <Input atributo={{
-                            id: 'address',
-                            name: 'Direccion',
-                            type: 'text',
-                            placeholder: 'Direccion',
-                            onChange: handleChange
-
-                        }}
-                        /><br></br>
-
-                    </div>
-                    <div className="In_puts" >
-                        <Input atributo={{
-                            id: 'rooms',
-                            name: 'Habitaciones',
-                            type: 'number',
-                            placeholder: 'Habitaciones Disponibles',
-                            onChange: handleChange
-
-                        }}
-                        /><br></br>
-
-                    </div>
-                    <div className="In_puts" >
-                        <Input atributo={{
-                            id: 'Bathrooms',
-                            name: 'Baños',
-                            type: 'number',
-                            placeholder: 'Baños Disponibles',
-                            onChange: handleChange
-
-                        }}
-                        /><br></br>
-
-                    </div>
-
-                    <div className="buttons">
-                        <button
-                            className="btn btn-primary"
-                            onClick={() => CreateHouse(form, setErr, setForm)}>Publicar
-                        </button>
-                    </div>
-
-
-
-                </form>
+          <div>
+            <div className="In_puts">
+              <Input
+                atributo={{
+                  id: "name_pub",
+                  name: "nombre",
+                  type: "text",
+                  placeholder: "Nombra Tu Publicacion",
+                  onChange: handleChange,
+                }}
+              />
+              <br></br>
             </div>
 
+            <div className="In_puts">
+              <InputCheck
+                form={form}
+                handleChange={handleChange}
+                setForm={setForm}
+              />
+              <br></br>
+            </div>
+            <div className="In_puts">
+              <Input
+                atributo={{
+                  id: "Contact",
+                  name: "Telefono",
+                  type: "tel",
+                  placeholder: "Telefono",
+                  onChange: handleChange,
+                }}
+              />
+              <br></br>
+            </div>
+            <div className="In_puts">
+              <Select atributos={{id:"Country",
+              name:"Country",
+              placeholder:"Country",
+              onChange:handleChange}} form={form}></Select>
+             
+              <br />
+              <br />
+            </div>
+          </div>
+
+          <div>
+
+            <div className="In_puts">
+              <Input
+                atributo={{
+                  id: "address",
+                  name: "Direccion",
+                  type: "text",
+                  placeholder: "Direccion",
+                  onChange: handleChange,
+                }}
+              />
+              <br></br>
+            </div>
+            <div className="In_puts">
+              <Input
+                atributo={{
+                  id: "rooms",
+                  name: "Habitaciones",
+                  type: "number",
+                  placeholder: "Habitaciones Disponibles",
+                  onChange: handleChange,
+                }}
+              />
+              <br></br>
+            </div>
+            <div className="In_puts">
+              <Input
+                atributo={{
+                  id: "Bathrooms",
+                  name: "Baños",
+                  type: "number",
+                  placeholder: "Baños Disponibles",
+                  onChange: handleChange,
+                }}
+              />
+              <br></br>
+            </div>
+          </div>
+        </form>
+        <div className="buttons">
+          <button
+            className="btn btn-primary"
+            onClick={() =>
+              public_house(form, setErr, setForm, setPublicar, Publica)
+            }
+          >
+            Publicar
+          </button>
         </div>
-    );
-}
+        <br></br>
+      </div>
+    </div>
+  );
+};
 
 export default Publicar;

@@ -1,123 +1,137 @@
 import React from "react";
 
-import Input from '../Input/Input';
+import Input from "../Input/Input";
 import Title from "../Title/Title";
-import './Form.css'
+import logo_CEIBA from "../../../assets/img/LOgo_text.png";
+import "./Form.css";
 
-const Form = ({ handleSubmit, handleChange, CrearUsuario, setLoading, setForm, setErr, form }) => {
+const Form = ({
+  handleSubmit,
+  handleChange,
+  CrearUsuario,
+  setLoading,
+  setForm,
+  setErr,
+  form,
+}) => {
+  return (
+    <div className="Formulario_inputs">
+      <img className="icon_reg" src={logo_CEIBA}></img>
+      <Title title="Registrar" subtitle="Usuario" />
+      <form onSubmit={handleSubmit}>
+        <div className="gridd">
+          <div className="row">
+            <div className="In_puts">
+              <Input
+                atributo={{
+                  id: "user_name",
+                  name: "nombre",
+                  type: "text",
+                  placeholder: "Ingrese su Nombre",
+                  onChange: handleChange,
+                }}
+              />
+              <br></br>
+            </div>
 
-    return (
-        <div className="Formulario_inputs">
+            <div className="In_puts">
+              <Input
+                atributo={{
+                  id: "user_lastname",
+                  name: "apellido",
+                  type: "text",
+                  placeholder: "Ingrese su Apellido",
+                  onChange: handleChange,
+                }}
+              />
+              <br></br>
+            </div>
 
-            <Title title="Registrar" subtitle="Usuario" />
+            <div className="In_puts">
+              <Input
+                atributo={{
+                  id: "username",
+                  name: "username",
+                  type: "text",
+                  placeholder: "Ingrese su Usuario",
+                  onChange: handleChange,
+                }}
+              />
+              <br></br>
+            </div>
+            <div className="In_puts">
+              <Input
+                atributo={{
+                  id: "password",
+                  name: "password",
+                  type: "password",
+                  placeholder: "Ingrese su Contraseña",
+                  onChange: handleChange,
+                }}
+              />
+              <br />
+              <br />
+            </div>
+          </div>
+          <div className="row">
+            <div className="In_puts">
+              <Input
+                atributo={{
+                  id: "user_pais",
+                  name: "pais",
+                  type: "text",
+                  placeholder: "Ingrese su Pais",
+                  onChange: handleChange,
+                }}
+              />
+              <select name="pais">
+<option value="AF">Afganistán</option>
+<option value="AL">Albania</option>
+<option value="DE">Alemania</option>
+<option value="AD">Andorra</option>
+</select>
+              <br></br>
+            </div>
 
+            <div className="In_puts">
+              <Input
+                atributo={{
+                  id: "user_city",
+                  name: "city",
+                  type: "text",
+                  placeholder: "Ingrese su Ciudad",
+                  onChange: handleChange,
+                }}
+              />
+              <br></br>
+            </div>
 
-            <form onSubmit={handleSubmit}>
-
-                <div className="In_puts">
-                    <Input atributo={{
-                        id: 'user_name',
-                        name: 'nombre',
-                        type: 'text',
-                        placeholder: 'Ingrese su Nombre',
-                        onChange: handleChange
-
-                    }}
-
-                    /><br></br>
-                </div>
-
-                <div className="In_puts" >
-                    <Input atributo={{
-                        id: 'user_lastname',
-                        name: 'apellido',
-                        type: 'text',
-                        placeholder: 'Ingrese su Apellido',
-                        onChange: handleChange
-
-                    }}
-                    /><br></br>
-
-                </div>
-
-
-
-                <div className="In_puts" >
-
-                    <Input atributo={{
-                        id: 'username',
-                        name: 'username',
-                        type: 'text',
-                        placeholder: 'Ingrese su Usuario',
-                        onChange: handleChange
-
-                    }}
-                    /><br></br>
-                </div>
-                <div className="In_puts">
-                    <Input atributo={{
-                        id: 'password',
-                        name: 'password',
-                        type: 'password',
-                        placeholder: 'Ingrese su Contraseña',
-                        onChange: handleChange
-
-                    }}
-                    />
-                    <br />
-                    <br />
-                </div>
-
-
-                <div className="In_puts" >
-                    <Input atributo={{
-                        id: 'user_pais',
-                        name: 'pais',
-                        type: 'text',
-                        placeholder: 'Ingrese su Pais',
-                        onChange: handleChange
-
-                    }}
-                    /><br></br>
-
-                </div>
-
-                <div className="In_puts" >
-                    <Input atributo={{
-                        id: 'user_city',
-                        name: 'city',
-                        type: 'text',
-                        placeholder: 'Ingrese su Ciudad',
-                        onChange: handleChange
-
-                    }}
-                    /><br></br>
-
-                </div>
-
-                <div className="In_puts" >
-                    <Input atributo={{
-                        id: 'user_addres',
-                        name: 'user_addres',
-                        type: 'text',
-                        placeholder:'Ingresa tu Direccion',
-                        onChange: handleChange
-                    }}
-                    /><br></br>
-                </div>
-
-                <div className="buttons">
-                    <button
-                        className="btn btn-primary"
-                        onClick={() => CrearUsuario(form, setErr, setForm, setLoading)}>Registrar
-                    </button>
-                </div>
-
-
-
-            </form>
+            <div className="In_puts">
+              <Input
+                atributo={{
+                  id: "user_addres",
+                  name: "user_addres",
+                  type: "text",
+                  placeholder: "Ingresa tu Direccion",
+                  onChange: handleChange,
+                }}
+              />
+              <br></br>
+            </div>
+          </div>
         </div>
-    );
-}
+
+        <div className="buttons">
+          <button
+            className="btn btn-primary"
+            onClick={() => CrearUsuario(form, setErr, setForm, setLoading)}
+          >
+            Registrar
+          </button>
+        </div>
+      </form>
+    </div>
+  );
+};
 
 export default Form;

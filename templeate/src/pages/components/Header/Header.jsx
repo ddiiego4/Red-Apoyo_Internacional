@@ -42,7 +42,7 @@ const Header = ({manage_states, username }) => {
                     <form type="submit" class="form-inline my-2 my-lg-0">
                         <div class="input-group rounded">
                             <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-                            <span class="input-group-text border-0" id="search-addon">
+                            <span class="input-group-textt border-0" id="search-addon">
                                 <i onClick={() => alert('Iniciar la busqueda')} class="gg-search"></i>
                             </span>
                         </div>

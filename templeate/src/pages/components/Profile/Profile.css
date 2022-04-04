@@ -1,0 +1,30 @@
+.Profiles_container{
+    margin-top: 100px;
+}
+
+.zona_fotos{
+    background-color: yellow;
+    margin: 10px;
+
+}
+.zona_costo{
+    margin: 10px;
+
+    background-color: green;
+}
+
+.zona_reserva{
+    background-color: aqua;
+    margin: 10px;
+
+}
+.zona_descripcion {
+    background-color: blue;
+    margin: 10px;
+
+}
+.zona_comentarios {
+    background-color: tomato;
+    margin: 10px;
+
+}

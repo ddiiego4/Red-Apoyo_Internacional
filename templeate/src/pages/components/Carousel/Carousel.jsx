@@ -22,7 +22,7 @@ const Carousel = () => {
         <img src="https://a0.muscache.com/im/pictures/bd619c0e-d1a8-4673-8766-0d50394825e2.jpg?im_w=720" />
         <br />
         <a>Ubicasion: </a>
-        <button onClick={() => alert('Redirigir al perfil de casa')} type="button">Ver Mas</button>
+        <button className="btn_carousel" onClick={() => alert('Redirigir al perfil de casa')} type="button">Ver Mas</button>
       </div>
       <br />
     </div>

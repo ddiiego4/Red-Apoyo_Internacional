@@ -9,7 +9,6 @@ import Map from '../Map/Map';
 import Hous from '../Hous/Hous';
 import Public from '../Publicar/Public'
 
-
 const cookies = new Cookies();
 const name_page = "Publicar Casa"
 
@@ -68,7 +67,7 @@ const Layouut = () => {
             <div>
                 <div className='Sections'>
                     {menu && <Menu />}
-                    {publicar && <Public />}
+                    {publicar && <Public setPublicar={setPublicar}/>}
                     {Mapa && <Map />}
                     {All && <Hous />}
                 </div>

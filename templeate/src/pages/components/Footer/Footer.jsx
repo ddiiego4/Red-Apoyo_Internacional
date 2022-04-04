@@ -6,7 +6,7 @@ const Footer = () => {
     <div>
       <footer class="text-center text-white" >
 
-        <div class="container pt-4">
+        <div class="container">
 
           <section className="icons_foot">
 

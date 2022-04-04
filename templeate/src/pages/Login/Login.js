@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Login.css'
+import login_icoon from '../../assets/img/CEIBA.png'
 
 import axios from 'axios';
 //import md5 from 'md5';
 import Cookies from 'universal-cookie';
 
-const baseUrl = "http://localhost:3002/usuarios";
+const baseUrl = "http://localhost:3003/usuarios";
 const cookies = new Cookies();
 
 class Login extends Component {
@@ -60,8 +61,8 @@ class Login extends Component {
     render() {
         return (
             <div className="containerPrincipal">
-                <div className='icon_login'>
-                </div>
+                <img src={login_icoon} className='icon_login'>
+                </img>
                 <div className="containerSecundario">
                     <div className="form-group2" >
                         <br />

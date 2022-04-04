@@ -3,7 +3,7 @@ import React, { Component , useState , useEffect} from "react";
 import Houses from "./Houses/Houses";
 import './Hous.css'
 
-const DbUrl="http://localhost:3002/Houses";
+const DbUrl="http://localhost:3003/Houses";
 const DbUrl2="https://isnft-prod.azurewebsites.net/api/houses";
 
 

@@ -12,7 +12,7 @@ import Message from "../components/Error/Message"
 import CrearUsuario from "../../pages/helpers/helpCrearUsario";
 
 
-const DbUrl = "http://localhost:3002/usuarios";
+const DbUrl = "http://localhost:3003/usuarios";
 let api = helpHttp();
 
 
@@ -45,7 +45,7 @@ const Registro = () => {
             
 
 
-            <div className="containerPrincipal">
+            <div className="containerPrincipall">
     
                 <div>
                     <div className="container_registro">

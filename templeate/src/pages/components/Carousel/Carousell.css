@@ -40,11 +40,12 @@ img {
 
 .Paginationcontainer {
     display: inline-table;
-    margin-top: 30px;
+    margin-top: 12px;
 }
 
 .container_carousel {
     width: 57%;
+    margin-top: 12px;
 }
 .carddd {
     margin: auto;
@@ -57,4 +58,16 @@ img {
     border: 1px solid rgba(0,0,0,.125);
     width: 284px;
     border-radius: 0.25rem;
+}
+
+.btn_carousel {
+    background-color: #d1c3c35c;
+    max-width: 75px;
+    margin: auto;
+    border-radius: 11px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    box-shadow: 0px 0px 10px 1px;
+    font-family: -webkit-body;
 }

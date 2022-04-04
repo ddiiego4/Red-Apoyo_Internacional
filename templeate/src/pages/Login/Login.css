@@ -1,3 +1,6 @@
+
+
+
 .containerPrincipal {
   margin: auto;
   position: absolute;
@@ -20,14 +23,11 @@
 }
 
 .icon_login {
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-image: url(https://cdn-icons-png.flaticon.com/512/6908/6908753.png);
-  width: 155px;
-  height: 153px;
-  border-radius: 124px;
-  border-style: outset;
-  margin-left: 34px;
+  border: none;
+  margin: auto;
+  width: 75%;
+  height: auto;
+  margin-left: 40px;
 }
 
 .logo_navbar img {
@@ -52,4 +52,39 @@ label {
   color: #ffffffc6;
   background-color: #2f33398c;
   border-color: #31373e;
+}
+
+
+
+@media (max-width: 700px) {
+
+  .icon_login {
+    border: none;
+    margin: auto;
+    width: 75%;
+    height: auto;
+    margin-left: 21px;
+}
+  .In_puts2 {
+    margin: auto !important;
+    width: 192px;
+    margin-left: -10px !important;
+  }
+  
+  @media (max-width: 500px) {
+  
+    .icon_login {
+      border: none;
+      margin: auto;
+      width: 75%;
+      height: auto;
+      margin-left: 20px;
+    }
+    .In_puts2 {
+      margin: auto !important;
+      width: 192px;
+      margin-left: -10px !important;
+    }
+  
+  }
 }
