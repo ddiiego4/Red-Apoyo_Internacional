@@ -6,8 +6,8 @@ import "./Houses.css";
 
 
 const new_pr = (renta)=>{
-    console.log(renta);
-    window.location.href=`/Products/${renta}`;    
+    renta+=1;
+    window.location.href=`/Products/${renta}`;
 }
 
 
@@ -19,7 +19,7 @@ const Houses = ({ houses = [] }) => {
       <div className="Houses_Container">
         <div className="Houses">
           <div className="row">
-            {houses.map((item, index) => (
+            {houses.map((item, index ) => (
               <div key={index} className="col">
                 <div
                   onClick={() => new_pr(index)}

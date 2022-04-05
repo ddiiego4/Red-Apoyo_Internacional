@@ -37,3 +37,25 @@ select {
     text-align: center;
     cursor: pointer;
 }
+
+.dat_in{
+    margin: 0;
+    text-align: center;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    padding: 24px;
+    top: 4px;
+    background: #abb0b1a6;
+    border: none;
+    border-radius: 9px;
+    max-height: 0px;
+    margin-left: 10px;
+    color: gray;
+    cursor: pointer;
+}
+
+.dat_in:focus-visible {
+    outline: none;
+    box-shadow: 0px 0px 6px 2px;
+}

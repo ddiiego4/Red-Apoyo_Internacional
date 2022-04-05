@@ -1,38 +1,37 @@
 
-import React, { componentDidMount, useEffect, useState } from 'react'
+import React, { componentDidMount, Component} from 'react'
 import axios from 'axios'
 
-const Select = ({atributos, form}) => {
 
 
-  const [country, setcountry] = useState([])
-  
-async function useEffect(){
+export default class Select extends Component {
 
+  state = {
+    Contry : []
+  }
+  componentDidMount(){
   axios
   .get("https://isnft-prod.azurewebsites.net/api/country")
   .then((resp) => {
-    setcountry(resp.data);
+    this.setState({Contry : resp.data})
+    
   })
   .catch((er) => {
-      console.log(er);
-    })
-
-  }
-  useEffect()
-
-
-  return (
-    <div>
-      <select name="country" className='form-control' onChange={() => atributos.handleChange}>
-        {country.map((item, index) =>
-            <><option key={index} value={item.id}>{item.name}</option>
-            <div className='In_puts'>
-          </div></>
-        )}
-      </select>
-    </div>
-  )
-
+    console.log(er);
+  })
+  
 }
-export default Select
+render(){
+   
+    return (
+      <div>
+        <select name="country" type="submit" className='form-control' > 
+          {this.state.Contry.map((item, index) =>
+              <><option key={index} value={item.id}>{item.name}</option>
+             </>
+          )}
+        </select>
+      </div>
+    )
+  }
+}

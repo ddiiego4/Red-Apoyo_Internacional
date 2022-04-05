@@ -61,7 +61,7 @@ class Login extends Component {
     render() {
         return (
             <div className="containerPrincipal">
-                <img src={login_icoon} className='icon_login'>
+                <img src={login_icoon} alt="logo" className='icon_login'>
                 </img>
                 <div className="containerSecundario">
                     <div className="form-group2" >

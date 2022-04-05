@@ -1,9 +1,13 @@
-import React from "react";
+import React , {useState}from "react";
 
 import Input from "../Input/Input";
 import Title from "../Title/Title";
+import Loader from "../Loader/Loader";
 import logo_CEIBA from "../../../assets/img/LOgo_text.png";
 import "./Form.css";
+import Select from "../Select/Select";
+import SelectLi from "../Select/SelectLi";
+
 
 const Form = ({
   handleSubmit,
@@ -14,8 +18,12 @@ const Form = ({
   setErr,
   form,
 }) => {
+  const [Load, setLoad] = useState(false);
+
   return (
     <div className="Formulario_inputs">
+      <div className="Load_pp">{Load && <Loader />}</div>
+
       <img className="icon_reg" src={logo_CEIBA}></img>
       <Title title="Registrar" subtitle="Usuario" />
       <form onSubmit={handleSubmit}>
@@ -25,7 +33,7 @@ const Form = ({
               <Input
                 atributo={{
                   id: "user_name",
-                  name: "nombre",
+                  name: "name",
                   type: "text",
                   placeholder: "Ingrese su Nombre",
                   onChange: handleChange,
@@ -33,12 +41,13 @@ const Form = ({
               />
               <br></br>
             </div>
+            
 
             <div className="In_puts">
               <Input
                 atributo={{
                   id: "user_lastname",
-                  name: "apellido",
+                  name: "lastName",
                   type: "text",
                   placeholder: "Ingrese su Apellido",
                   onChange: handleChange,
@@ -51,7 +60,7 @@ const Form = ({
               <Input
                 atributo={{
                   id: "username",
-                  name: "username",
+                  name: "userName",
                   type: "text",
                   placeholder: "Ingrese su Usuario",
                   onChange: handleChange,
@@ -74,48 +83,41 @@ const Form = ({
             </div>
           </div>
           <div className="row">
-            <div className="In_puts">
+          <div className="In_puts">
               <Input
                 atributo={{
-                  id: "user_pais",
-                  name: "pais",
-                  type: "text",
-                  placeholder: "Ingrese su Pais",
+                  id: "user_name",
+                  name: "email",
+                  type: "email",
+                  placeholder: "Ingrese su Correo",
                   onChange: handleChange,
                 }}
               />
-              <select name="pais">
-<option value="AF">Afganistán</option>
-<option value="AL">Albania</option>
-<option value="DE">Alemania</option>
-<option value="AD">Andorra</option>
-</select>
               <br></br>
             </div>
-
-            <div className="In_puts">
-              <Input
-                atributo={{
-                  id: "user_city",
-                  name: "city",
-                  type: "text",
-                  placeholder: "Ingrese su Ciudad",
-                  onChange: handleChange,
-                }}
-              />
+            <div className="In_puts" name="country" onChange={handleChange}>
+              <Select />
               <br></br>
+            <div className="In_puts" name="cityId" onChange={handleChange}>
+               <SelectLi props={form} />
+              <br></br>
+            </div>
             </div>
 
             <div className="In_puts">
               <Input
                 atributo={{
                   id: "user_addres",
-                  name: "user_addres",
-                  type: "text",
-                  placeholder: "Ingresa tu Direccion",
+                  name: "phone",
+                  type: "tel",
+                  placeholder: "Ingresa tu Telefono",
                   onChange: handleChange,
                 }}
               />
+              <br></br>
+            </div>
+            <div className="In_puts">
+              <input className="dat_in" type="date" name="birthday" onChange={handleChange}></input> 
               <br></br>
             </div>
           </div>
@@ -124,7 +126,7 @@ const Form = ({
         <div className="buttons">
           <button
             className="btn btn-primary"
-            onClick={() => CrearUsuario(form, setErr, setForm, setLoading)}
+            onClick={() => CrearUsuario(form, setErr, setForm, setLoad)}
           >
             Registrar
           </button>

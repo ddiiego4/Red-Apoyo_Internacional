@@ -13,8 +13,8 @@ import CreateHouse from "../../helpers/helpCreateHouse";
 import InputCheck from "../InputCheck/InputCheck";
 import Loader from "../Loader/Loader";
 
-
 const DbUrl = "http://localhost:3003/Houses";
+const DbUrl2 = ""
 
 const Publicar = ({
   handleSubmit,
@@ -27,12 +27,10 @@ const Publicar = ({
   Publica,
   page_name,
 }) => {
-
   const [Load, setLoad] = useState(false);
 
   function public_house(form, setErr, setForm, setPublicar, Publica) {
     CreateHouse(form, setErr, setForm);
-    console.log(Publica);
 
     setLoad(true);
     setTimeout(() => {
@@ -42,9 +40,7 @@ const Publicar = ({
 
   return (
     <div className="container_publicar">
-      <div className="Load_p">
-      {Load && <Loader />}
-      </div>
+      <div className="Load_p">{Load && <Loader />}</div>
       <div className="Formulario_inputs">
         <Title title={page_name} />
 
@@ -58,7 +54,7 @@ const Publicar = ({
               <Input
                 atributo={{
                   id: "name_pub",
-                  name: "nombre",
+                  name: "name_pub",
                   type: "text",
                   placeholder: "Nombra Tu Publicacion",
                   onChange: handleChange,
@@ -75,36 +71,41 @@ const Publicar = ({
               />
               <br></br>
             </div>
-            <div className="In_puts">
-              <Input
+            <div className="In_puts" onChange={handleChange}>
+              <Select
+                atributos={{
+                  id: "Country",
+                  name: "countyId",
+                  placeholder: "Country",
+                  onChange: handleChange,
+                }}
+                form={form}
+              ></Select>
+
+              <br />
+              <br />
+            </div>
+            <div className="In_puts" onChange={handleChange}>
+            <Input
                 atributo={{
-                  id: "Contact",
-                  name: "Telefono",
-                  type: "tel",
-                  placeholder: "Telefono",
+                  id: "precio",
+                  name: "price",
+                  type: "text",
+                  placeholder: "Costo",
                   onChange: handleChange,
                 }}
               />
-              <br></br>
-            </div>
-            <div className="In_puts">
-              <Select atributos={{id:"Country",
-              name:"Country",
-              placeholder:"Country",
-              onChange:handleChange}} form={form}></Select>
-             
               <br />
               <br />
             </div>
           </div>
 
           <div>
-
             <div className="In_puts">
               <Input
                 atributo={{
                   id: "address",
-                  name: "Direccion",
+                  name: "direction",
                   type: "text",
                   placeholder: "Direccion",
                   onChange: handleChange,
@@ -116,7 +117,7 @@ const Publicar = ({
               <Input
                 atributo={{
                   id: "rooms",
-                  name: "Habitaciones",
+                  name: "rooms",
                   type: "number",
                   placeholder: "Habitaciones Disponibles",
                   onChange: handleChange,
@@ -128,12 +129,29 @@ const Publicar = ({
               <Input
                 atributo={{
                   id: "Bathrooms",
-                  name: "Baños",
+                  name: "Bathrooms",
                   type: "number",
                   placeholder: "Baños Disponibles",
                   onChange: handleChange,
                 }}
               />
+              <br></br>
+            </div>
+            <div >
+              <div class="mb-3">
+                <label for="formFileMultiple" class="form-label">
+                  Inserta tus Fotos
+                </label>
+                <input
+                  class="form-control"
+                  type="file"
+                  id="formFileMultiple"
+                  name="url"
+                  onChange={handleChange}
+                  multiple
+                ></input>
+              </div>
+
               <br></br>
             </div>
           </div>

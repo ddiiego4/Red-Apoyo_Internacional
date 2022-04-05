@@ -4,7 +4,7 @@
 
 .In_puts {
     display: flex;
-    margin: 10px;
+    margin: auto;
 }
 
 .In_puts2 {
@@ -56,3 +56,9 @@ h1
     box-shadow: 0px 0px 22px 2px;
 }
 
+.Load_pp {
+    position: absolute;
+    right: 233px;
+    bottom: 182px;
+    z-index: 1;
+}
