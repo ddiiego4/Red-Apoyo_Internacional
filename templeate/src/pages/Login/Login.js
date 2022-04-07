@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Login.css'
 import login_icoon from '../../assets/img/CEIBA.png'
@@ -6,16 +6,18 @@ import login_icoon from '../../assets/img/CEIBA.png'
 import axios from 'axios';
 //import md5 from 'md5';
 import Cookies from 'universal-cookie';
+import Loader from '../components/Loader/Loader';
 
-const baseUrl = "http://localhost:3003/usuarios";
+const baseUrl = "https://isnft-prod.azurewebsites.net/api/auth";
 const cookies = new Cookies();
 
 class Login extends Component {
     state = {
         form: {
-            username: '',
+            email: '',
             password: ''
-        }
+        },
+        load : false
     }
 
     handleChange = async e => {
@@ -27,33 +29,29 @@ class Login extends Component {
         });
     }
 
+    /** IniciarSesion() - This is one function what send method post the data of curse async 
+     * Return: one promise with response 
+     *  - Otherwise return error status
+     */
+    // Enviamos la data hacea nuestra url en methodo post si nuestro response
+    // Contiene el token esto indica que nuestro usuario se encuentra registrado
     iniciarSesion = async () => {
-        await axios.get(baseUrl, { params: { username: this.state.form.username, password: this.state.form.password } })
+        await axios
+        .post(baseUrl, { email: this.state.form.email, password: this.state.form.password })
             .then(response => {
-                return response.data;
-            })
-            .then(response => {
-                if (response.length > 0) {
-                    var respuesta = response[0];
-                    cookies.set('id', respuesta.id, { path: "/" });
-                    cookies.set('apellido', respuesta.apellido, { path: "/" });
-                    cookies.set('nombre', respuesta.nombre, { path: "/" });
-                    cookies.set('username', respuesta.username, { path: "/" });
-                    alert(`Bienvenido ${respuesta.nombre} ${respuesta.apellido}`);
-                    window.location.href = "./menu";
-                } else {
-                    alert('El usuario o la contraseña no son correctos');
-                }
+                var token = response.data;
+                cookies.set('id_usr_tok', token.accessToken, {path: "/"});
+                alert(`Bienvenido`);
+                window.location.href="./menu";
             })
             .catch(error => {
                 console.log(error);
             })
-
     }
 
     componentDidMount() {
-        if (cookies.get('username')) {
-            window.location.href = "./menu";
+    if (cookies.get("id_usr_tok")) {
+           window.location.href = "./menu";
         }
     }
 
@@ -61,6 +59,7 @@ class Login extends Component {
     render() {
         return (
             <div className="containerPrincipal">
+                
                 <img src={login_icoon} alt="logo" className='icon_login'>
                 </img>
                 <div className="containerSecundario">
@@ -72,7 +71,7 @@ class Login extends Component {
                             <input
                                 type="text"
                                 className="form-control"
-                                name="username"
+                                name="email"
                                 onChange={this.handleChange}
                             />
 

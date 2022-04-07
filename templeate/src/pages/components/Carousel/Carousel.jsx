@@ -1,9 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "bootstrap";
 import "reactstrap";
-import { BrowserRouter, Switch, Router } from "react-router-dom";
 import "../Carousel/Carousell.css";
-import Message from "../Error/Message";
+//import Message from "../Error/Message";
 
 const Carousel = () => {
 
@@ -19,9 +18,9 @@ const Carousel = () => {
           stinctio
           itaque!
         </p>
-        <img src="https://a0.muscache.com/im/pictures/bd619c0e-d1a8-4673-8766-0d50394825e2.jpg?im_w=720" />
+        <img alt="profile_carousel" src="https://a0.muscache.com/im/pictures/bd619c0e-d1a8-4673-8766-0d50394825e2.jpg?im_w=720" />
         <br />
-        <a>Ubicasion: </a>
+        <p>Ubicasion: </p>
         <button className="btn_carousel" onClick={() => alert('Redirigir al perfil de casa')} type="button">Ver Mas</button>
       </div>
       <br />

@@ -1,4 +1,4 @@
-import React, { Component , useState } from 'react';
+import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import Cookies from 'universal-cookie';
@@ -8,27 +8,27 @@ import './Layout.css'
 
 const cookies = new Cookies();
 
-const redirect = () => {
-    window.location.href = './Login';
-}
+/**
+ * 
+ * const redirect = () => {
+ *    window.location.href = './Login';
+ *   }
+ * */
 
 class Layout extends Component {
     
     cerrarSesion = () => {
-        cookies.remove('id', { path: "/" });
-        cookies.remove('nombre', { path: "/" });
-        cookies.remove('username', { path: "/" });
+        cookies.remove('id_usr_tok', { path: "/" });
         window.location.href = './';
     }
 
     componentDidMount() {
-        if (!cookies.get('username')) {
+        if (!cookies.get('id_usr_tok')) {
             window.location.href = "./";
         }
     }
 
     render() {
-        console.log('id: ' + cookies.get('id'));
         return (
             <>
                 <Layouut />

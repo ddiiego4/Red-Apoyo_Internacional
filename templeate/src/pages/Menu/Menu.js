@@ -8,15 +8,13 @@ import './Menu.css'
 const cookies = new Cookies();
 
 
-
-
 class Menu extends Component {
 
     componentDidMount() {
-        if (!cookies.get('username')) {
-            window.location.href = "./";
+        if (!cookies.get("id_usr_tok")) {
+               window.location.href = "./";
+            }
         }
-    }
 
     render() {
 

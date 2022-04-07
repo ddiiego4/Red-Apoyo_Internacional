@@ -1,11 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Dropdown from "../Dropdown/Dropdown";
-import Cookies from "universal-cookie";
-
 import './Header.css';
-const cookies = new Cookies();
 
 const Header = ({manage_states, username }) => {
 

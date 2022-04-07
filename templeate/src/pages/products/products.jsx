@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Cookies from 'universal-cookie';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
@@ -8,26 +8,36 @@ import Card from '../components/Card/card';
 const cookies = new Cookies();
 
 const redirect = () =>{
-
     window.location.href('./Login');
 }
 
-const products = () => {
 
-    function cerrarSesion() {
-        cookies.remove('id', { path: "/" });
-        cookies.remove('apellido_paterno', { path: "/" });
-        cookies.remove('apellido_materno', { path: "/" });
-        cookies.remove('nombre', { path: "/" });
-        cookies.remove('username', { path: "/" });
-        window.location.href = './';
+
+export class products extends Component{
+
+    componentDidMount() {
+        if (!cookies.get('username')) {
+            window.location.href = "./menu";
+        }
     }
 
+    /**
+     * Funtion to CLose Sesion user
+     *
+    function cerrarSesion() {
+        cookies.remove('id', { path: "/" });
+        window.location.href = './';
+    }
+    *
+     * this component is to review the value the cookie and
+     *
     const componentDidMount = () => {
         if (!cookies.get('username')) {
             window.location.href = "./";
         }
     }
+*/
+render(){
 
     return (
         <div className='container_menu'>
@@ -55,5 +65,4 @@ const products = () => {
             </div>
   )
 }
-
-export default products
+}

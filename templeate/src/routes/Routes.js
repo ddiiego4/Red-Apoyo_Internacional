@@ -1,7 +1,7 @@
 import React from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Login from '../pages/Login/Login';
-import products from '../pages/products/products';
+import { products } from '../pages/products/products';
 import Resgistro from '../pages/Registro/Registro';
 import Profile from '../pages/components/Profile/Profile';
 import Search_House from "../pages/Search_House/Search_House";

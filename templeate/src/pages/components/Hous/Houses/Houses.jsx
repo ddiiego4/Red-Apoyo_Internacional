@@ -1,7 +1,4 @@
-import { auto, read } from "@popperjs/core";
-import React, { useState } from "react";
-import { Route } from "react-router-dom";
-import Profile from "../../Profile/Profile";
+import React from "react";
 import "./Houses.css";
 
 
@@ -12,7 +9,7 @@ const new_pr = (renta)=>{
 
 
 const Houses = ({ houses = [] }) => {
-  const [img, setimg] = useState(false);
+  //const [img, setimg] = useState(false);
 
   return (
     <div>
@@ -24,21 +21,23 @@ const Houses = ({ houses = [] }) => {
                 <div
                   onClick={() => new_pr(index)}
                   className="cardd"
-                  style={{ cursor: "pointer", margin: auto, marginTop: "10px" }}
+                  style={{ cursor: "pointer", margin:"auto", marginTop: "10px" }}
                 >
                   <h1>{item.nombre}</h1>
                   <img
                     className="card-img"
+                    alt="card_image"
                     src="https://a0.muscache.com/im/pictures/4b75813b-bc09-4719-b6b8-06a5f170724d.jpg?im_w=960"
                   />
                   <span className="spann">
                     <img
+                    alt="card_image2"
                       className="card-img"
                       src="https://a0.muscache.com/im/pictures/4b75813b-bc09-4719-b6b8-06a5f170724d.jpg?im_w=960"
                     />
                   </span>
                   <p>
-                    <a>{item.Direccion}</a>
+                    <p>{item.Direccion}</p>
                     <br />
                     {item.Ciudad}/{item.Pais}
                   </p>

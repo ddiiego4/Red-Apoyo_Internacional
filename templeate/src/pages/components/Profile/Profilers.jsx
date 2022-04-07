@@ -1,8 +1,6 @@
 import React from 'react'
 import Title from '../Title/Title';
 
-
-
 const Profilers = ({profile_Data}) => {
     console.log("DAtataaaa");
     console.log(profile_Data);  
@@ -13,7 +11,7 @@ const Profilers = ({profile_Data}) => {
     
     <div className='Profiles_container'>Profilers
 
-        <Title title={nombre.split('-')} />
+        <Title title={"nombre"} />
         <div className='zona_comentarios'>Comentarios</div>
         <div className='zona_fotos'>Fotos</div>
         <div className='zona_reserva'>Fecha_reserva</div>

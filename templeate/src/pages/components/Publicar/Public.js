@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Message from "../Error/Message";
+import Loader from "../Loader/Loader";
 import Publicar from "./Publicar";
 
-const DbUrl = "http://localhost:3003/Houses";
 
 const Public = ({ setPublicar, Publica }) => {
   const [form, setForm] = useState({});
@@ -34,6 +34,9 @@ const Public = ({ setPublicar, Publica }) => {
         <div className="container">
           {Err && (
             <Message Mensaje={"Error " + Err.status + " : " + Err.statusText} />
+          )}
+          {Loading &&(
+            <Loader />
           )}
           {!form && <h1>Error al conectar a la base de datos</h1>}
 

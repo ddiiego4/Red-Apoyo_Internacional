@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+/***import React, { useEffect, useState } from "react";
 
 import { helpHttp } from "../../pages/helpers/helpHttp";
 import ComponentDidMount from "../../pages/helpers/component/componentDidMount";
@@ -77,3 +77,4 @@ const Registro = () => {
     );
 }
 export default Registro;
+*/

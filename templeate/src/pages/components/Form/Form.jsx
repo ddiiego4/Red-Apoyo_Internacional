@@ -24,7 +24,7 @@ const Form = ({
     <div className="Formulario_inputs">
       <div className="Load_pp">{Load && <Loader />}</div>
 
-      <img className="icon_reg" src={logo_CEIBA}></img>
+      <img className="icon_reg" alt="Icon_logo" src={logo_CEIBA}></img>
       <Title title="Registrar" subtitle="Usuario" />
       <form onSubmit={handleSubmit}>
         <div className="gridd">
@@ -86,7 +86,7 @@ const Form = ({
           <div className="In_puts">
               <Input
                 atributo={{
-                  id: "user_name",
+                  id: "user_email",
                   name: "email",
                   type: "email",
                   placeholder: "Ingrese su Correo",
@@ -99,7 +99,7 @@ const Form = ({
               <Select />
               <br></br>
             <div className="In_puts" name="cityId" onChange={handleChange}>
-               <SelectLi props={form} />
+               <SelectLi />
               <br></br>
             </div>
             </div>

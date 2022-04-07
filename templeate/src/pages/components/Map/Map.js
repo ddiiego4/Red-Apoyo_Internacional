@@ -16,7 +16,7 @@ const Map = () =>{
                 </section>
             </div>
             <div className="Map">
-                <a>Mapa</a>
+                <a href="./Mapa" >Mapa</a>
             </div>    
         </div>
     );

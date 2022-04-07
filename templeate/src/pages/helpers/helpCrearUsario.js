@@ -1,43 +1,62 @@
-import { helpHttp } from "./helpHttp";
-import axios from "axios";
+import React from 'react'
 
-const DbUrl = "https://isnft-prod.azurewebsites.net/api/users";
+const CrearUsario = (data, setErr, setForm, setLoad) => {
+  return (
+    <div>helpCrearUsario</div>
+  );
+}
 
-const CrearUsuario = (data, setErr, setForm, setLoad) => {
-  //console.log(data.id);
+export default CrearUsario;
 
-  let state = {
+
+/**
+ * 
+  Esta es nuestra funcion para enviar la data con nuestros headers
+
+const tok = "https://isnft-prod.azurewebsites.net/api/";
+
+  let statetoken = {
     datos: {
       email: data.email,
       password: data.password,
-      person: {
-        birthday: data.birthday,
-        cityId: data.countryId,
-        lastName: data.lastName,
-        name: data.name,
-        phone: data.phone,
-      },
-      userName: data.userName,
+    },
+    Headerss: {
+      "content-Type": "application/json",
+      Authorization: "",
     },
   };
 
-  console.log(data);
+  
+  const headers = {
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer Hola'
+  }
 
-  axios
-    .post(DbUrl, state.datos, {
-      headers: {
-        "accept": "application/json",
-        "Authorization":
-          "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sIjpbeyJhdXRob3JpdHkiOiJob3N0In0seyJhdXRob3JpdHkiOiJ0cmF2ZWxlciJ9XSwibmFtZSI6ImRrYjRyYiIsImVtYWlsIjoiamp1YW5uY2E2NTFAZ21haWwuY29tIiwiaWF0IjoxNjQ5MTYwNzg3LCJleHAiOjE2NDkyNDcxODd9.v4KtNtkrqNDXsI1PWaj6ME7QPgmsPzRd6KkfOyBYTqoGZ4xJHLeK9j7Yzd3kixVDGiHys0IUaO-oef01e5TNkw",
-        "Content-Type": "application/json",
-      },
-    })
-    .then((res) => {
-      setLoad(true);
-      setTimeout(() => {
-        setLoad(false);
-        // window.location.href="./Login"
-      });
-    }, 2000);
-};
-export default CrearUsuario;
+
+    axios
+        .post(baseUrl, {
+            "email": "doe1@doe.com",
+            "password": "doe123",
+            "person": {
+              "birthday": "18-22-2001",
+              "cityId": 1,
+              "lastName": "does",
+              "name": "jhond",
+              "phone": "202132121"
+            },
+            "userName": "doee"
+          }
+          , {
+              headers:headers
+          }
+          //{ email: this.state.form.email, password: this.state.form.password }
+            )
+            .then(response => {
+                console.log(response.data);
+              })
+            .catch(error => {
+                console.log(error);
+            })
+  };
+  */
+

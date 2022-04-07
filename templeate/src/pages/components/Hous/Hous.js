@@ -1,10 +1,10 @@
 import axios from "axios";
-import React, { Component , useState , useEffect} from "react";
+import React, { Component } from "react";
 import Houses from "./Houses/Houses";
 import './Hous.css'
 
 const DbUrl="http://localhost:3003/Houses";
-const DbUrl2="https://isnft-prod.azurewebsites.net/api/houses";
+//const DbUrl2="https://isnft-prod.azurewebsites.net/api/houses";
 
 
 export default class Hous extends Component {

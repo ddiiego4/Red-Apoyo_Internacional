@@ -10,7 +10,6 @@ import Hous from '../Hous/Hous';
 import Public from '../Publicar/Public'
 
 const cookies = new Cookies();
-const name_page = "Publicar Casa"
 
 const Layouut = () => {
 

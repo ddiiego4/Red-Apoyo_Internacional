@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import { ReactDOM } from "react";
 import Select from "../Select/Select";
 
 import Input from "../Input/Input";
 import Title from "../Title/Title";
-import axios from "axios";
 import "./Publicar.css";
 
 import Rent from "../../../assets/img/Public/Rent.png";
@@ -13,8 +11,7 @@ import CreateHouse from "../../helpers/helpCreateHouse";
 import InputCheck from "../InputCheck/InputCheck";
 import Loader from "../Loader/Loader";
 
-const DbUrl = "http://localhost:3003/Houses";
-const DbUrl2 = ""
+
 
 const Publicar = ({
   handleSubmit,

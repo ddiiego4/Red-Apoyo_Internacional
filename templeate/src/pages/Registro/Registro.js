@@ -1,18 +1,13 @@
-import React, { useEffect, useState } from "react";
-
-import { helpHttp } from "../../pages/helpers/helpHttp";
+import React, { useState } from "react";
 import ComponentDidMount from "../../pages/helpers/component/componentDidMount";
 
 import "./Registro.css";
 
 import Form from "../components/Form/Form";
-import Title from "../components/Title/Title";
-import Loader from "../components/Loader/Loader";
 import Message from "../components/Error/Message";
 import CrearUsuario from "../../pages/helpers/helpCrearUsario";
+import Loader from "../components/Loader/Loader";
 
-const DbUrl = "http://localhost:3003/usuarios";
-let api = helpHttp();
 
 const Registro = () => {
   const [form, setForm] = useState([]);
@@ -44,6 +39,9 @@ const Registro = () => {
               <Message
                 Mensaje={"Error " + Err.status + " : " + Err.statusText}
               />
+            )}
+            {Loading && (
+              <Loader></Loader>
             )}
             {!form && <h1>Error al conectar a la base de datos</h1>}
 
