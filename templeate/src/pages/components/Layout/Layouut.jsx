@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import Cookies from 'universal-cookie';
 
 import Header from '../Header/Header';
@@ -12,6 +12,25 @@ import Public from '../Publicar/Public'
 const cookies = new Cookies();
 
 const Layouut = () => {
+    const [lng, setLng] = useState({
+        longitude:0,
+        latitude:0
+    })
+
+    useEffect(()=>{
+        navigator.geolocation.getCurrentPosition(
+            function(position){
+                setLng({
+                    longitude: position.coords.longitude,
+                    latitude: position.coords.latitude
+                })
+            },
+            function (error) { },
+            {
+                enableHighAccuracy: true
+            }
+            );
+    });
 
     const [menu, setMenu] = useState(true);
     const [publicar, setPublicar] = useState(false);
@@ -55,7 +74,6 @@ const Layouut = () => {
         }
     }
 
-
     return (
         <div className='container_menu'>
             <div>
@@ -66,7 +84,7 @@ const Layouut = () => {
             <div>
                 <div className='Sections'>
                     {menu && <Menu />}
-                    {publicar && <Public setPublicar={setPublicar}/>}
+                    {publicar && <Public setPublicar={setPublicar} Location_user={lng}/>}
                     {Mapa && <Map />}
                     {All && <Hous />}
                 </div>

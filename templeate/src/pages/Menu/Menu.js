@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component} from 'react';
 import Cookies from 'universal-cookie';
 import Carousel from '../components/Carousel/Carousel';
 import Pagination from '../components/Pagination/Pagination';
@@ -9,6 +9,8 @@ const cookies = new Cookies();
 
 
 class Menu extends Component {
+
+   
 
     componentDidMount() {
         if (!cookies.get("id_usr_tok")) {

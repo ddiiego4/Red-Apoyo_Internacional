@@ -37,3 +37,20 @@
 .map_cent {
     background-color: red;
 }
+
+.Mapaa {
+    width: 71%;
+    margin: auto;
+    box-shadow: 0px 0px 52px -17px;
+    margin-bottom: 50px;
+}
+.leaflet-container {
+    width: 70vw;
+    height: 60vh;
+    margin: auto;
+}
+
+.img_map_available{
+    width: 100px;
+    height: 100px;
+}

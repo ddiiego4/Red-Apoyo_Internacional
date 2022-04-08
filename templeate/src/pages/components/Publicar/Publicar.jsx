@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import Select from "../Select/Select";
-
+import SelectLi from "../Select/SelectLi";
 import Input from "../Input/Input";
+import InputN from "../Input/InputN";
+import InputImg from "../InputImg/InputImg";
+
 import Title from "../Title/Title";
 import "./Publicar.css";
 
@@ -10,8 +13,6 @@ import Rent from "../../../assets/img/Public/Rent.png";
 import CreateHouse from "../../helpers/helpCreateHouse";
 import InputCheck from "../InputCheck/InputCheck";
 import Loader from "../Loader/Loader";
-
-
 
 const Publicar = ({
   handleSubmit,
@@ -23,12 +24,14 @@ const Publicar = ({
   setPublicar,
   Publica,
   page_name,
+  location,
 }) => {
   const [Load, setLoad] = useState(false);
+  const [Lng, setLng] = useState(false);
 
-  function public_house(form, setErr, setForm, setPublicar, Publica) {
-    CreateHouse(form, setErr, setForm);
-
+  function public_house(form, setErr, setForm, setPublicar, Publica, location) {
+    CreateHouse(form, setErr, setForm, location);
+   //console.log(location)
     setLoad(true);
     setTimeout(() => {
       setLoad(false);
@@ -59,31 +62,8 @@ const Publicar = ({
               />
               <br></br>
             </div>
-
-            <div className="In_puts">
-              <InputCheck
-                form={form}
-                handleChange={handleChange}
-                setForm={setForm}
-              />
-              <br></br>
-            </div>
             <div className="In_puts" onChange={handleChange}>
-              <Select
-                atributos={{
-                  id: "Country",
-                  name: "countyId",
-                  placeholder: "Country",
-                  onChange: handleChange,
-                }}
-                form={form}
-              ></Select>
-
-              <br />
-              <br />
-            </div>
-            <div className="In_puts" onChange={handleChange}>
-            <Input
+              <Input
                 atributo={{
                   id: "precio",
                   name: "price",
@@ -91,6 +71,42 @@ const Publicar = ({
                   placeholder: "Costo",
                   onChange: handleChange,
                 }}
+              />
+
+              <br />
+              <br />
+            </div>
+
+<div className="locationss">
+
+            <div className="In_puts" onChange={handleChange}>
+              <Select
+                atributos={{
+                  id: "Country",
+                  name: "countyId",
+                  placeholder: "Country",
+                }}
+              ></Select>
+              <br></br>
+            </div>
+
+            <div className="In_puts" onChange={handleChange}>
+              <SelectLi
+                atributos={{
+                  id: "Citi",
+                  name: "citiId",
+                  placeholder: "City",
+                }}
+              ></SelectLi>
+              <br></br>
+            </div>
+        </div>
+
+            <div className="In_puts" onChange={handleChange}>
+              <InputCheck
+                form={form}
+                handleChange={handleChange}
+                setForm={setForm}
               />
               <br />
               <br />
@@ -111,7 +127,7 @@ const Publicar = ({
               <br></br>
             </div>
             <div className="In_puts">
-              <Input
+              <InputN
                 atributo={{
                   id: "rooms",
                   name: "rooms",
@@ -123,7 +139,7 @@ const Publicar = ({
               <br></br>
             </div>
             <div className="In_puts">
-              <Input
+              <InputN
                 atributo={{
                   id: "Bathrooms",
                   name: "Bathrooms",
@@ -134,19 +150,12 @@ const Publicar = ({
               />
               <br></br>
             </div>
-            <div >
+            <div>
               <div class="mb-3">
                 <label for="formFileMultiple" class="form-label">
                   Inserta tus Fotos
                 </label>
-                <input
-                  class="form-control"
-                  type="file"
-                  id="formFileMultiple"
-                  name="url"
-                  onChange={handleChange}
-                  multiple
-                ></input>
+                <div onChange={handleChange}><InputImg/></div>
               </div>
 
               <br></br>
@@ -157,7 +166,7 @@ const Publicar = ({
           <button
             className="btn btn-primary"
             onClick={() =>
-              public_house(form, setErr, setForm, setPublicar, Publica)
+              public_house(form, setErr, setForm, setPublicar, Publica, location)
             }
           >
             Publicar

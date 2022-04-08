@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Login.css'
 import login_icoon from '../../assets/img/CEIBA.png'
@@ -6,19 +6,21 @@ import login_icoon from '../../assets/img/CEIBA.png'
 import axios from 'axios';
 //import md5 from 'md5';
 import Cookies from 'universal-cookie';
-import Loader from '../components/Loader/Loader';
 
 const baseUrl = "https://isnft-prod.azurewebsites.net/api/auth";
 const cookies = new Cookies();
 
 class Login extends Component {
+    
+    load = false;
+    
     state = {
         form: {
             email: '',
             password: ''
-        },
-        load : false
+        }
     }
+
 
     handleChange = async e => {
         await this.setState({
@@ -57,6 +59,7 @@ class Login extends Component {
 
 
     render() {
+        
         return (
             <div className="containerPrincipal">
                 

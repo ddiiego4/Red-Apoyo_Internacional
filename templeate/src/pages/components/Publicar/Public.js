@@ -4,7 +4,7 @@ import Loader from "../Loader/Loader";
 import Publicar from "./Publicar";
 
 
-const Public = ({ setPublicar, Publica }) => {
+const Public = ({ setPublicar, Publica, Location_user}) => {
   const [form, setForm] = useState({});
   // const [editForm, setEditForm] = useState(null);
   const [Err, setErr] = useState(null);
@@ -49,6 +49,7 @@ const Public = ({ setPublicar, Publica }) => {
             form={form}
             setPublicar={setPublicar}
             Publica={Publica}
+            location={Location_user}
           />
         </div>
       </div>

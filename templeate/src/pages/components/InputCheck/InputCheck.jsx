@@ -14,8 +14,7 @@ const InputCheck = ({form, handlechange, setForm}) => {
         setForm({
             "Estado": false
         })
-    }
-        alert(`New states ${form.Estado}`)     
+    }   
     }
 
     return (

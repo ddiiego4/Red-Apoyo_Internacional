@@ -34,18 +34,7 @@ const tok = "https://isnft-prod.azurewebsites.net/api/";
 
 
     axios
-        .post(baseUrl, {
-            "email": "doe1@doe.com",
-            "password": "doe123",
-            "person": {
-              "birthday": "18-22-2001",
-              "cityId": 1,
-              "lastName": "does",
-              "name": "jhond",
-              "phone": "202132121"
-            },
-            "userName": "doee"
-          }
+        .post(baseUrl, data
           , {
               headers:headers
           }

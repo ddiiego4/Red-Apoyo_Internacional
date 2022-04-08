@@ -21,6 +21,8 @@
 .rent img {
     border: none;
     opacity: 0.5;
+    width: 238px;
+    margin-left: -100px;
 }
 
 .Load_p {
@@ -28,4 +30,13 @@
     right: 640px;
     bottom: 170px;
     z-index: 1;
+}
+
+
+.photoss {
+    width: 247px;
+}
+
+.locationss {
+    display: flex;
 }

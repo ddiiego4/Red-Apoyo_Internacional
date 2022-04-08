@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import "./Select.css"
 
 export default class Select extends Component {
 
@@ -21,7 +22,7 @@ export default class Select extends Component {
 render(){
    
     return (
-      <div>
+      <div className='country_control'>
         <select name="country" type="submit" className='form-control' > 
           {this.state.Contry.map((item, index) =>
               <><option key={index} value={item.id}>{item.name}</option>

@@ -1,9 +1,9 @@
-import React from "react";
-import './Input.css'
+import React from 'react'
 
-const Input = ({atributo, Error_H, parametro , icon}) => {
+
+const InputN = ({atributo, Error_H, parametro , icon}) => {
     return (
-        <div class="input-group mb-3">
+        <div class="input-groupp mb-3">
                     
             <input 
                 id={atributo.id}
@@ -22,6 +22,4 @@ const Input = ({atributo, Error_H, parametro , icon}) => {
     )
 };
 
-
-
-export default Input;
+export default InputN

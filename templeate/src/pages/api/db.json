@@ -1,4 +1,10 @@
 {
+  "photos": [
+    {
+      "id" : 1,
+      "url": "C:\\fakepath\\LOgo_text.png"
+    }
+  ],
   "usuarios": [
     {
       "nombre": "Juan",

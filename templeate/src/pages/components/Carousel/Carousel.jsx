@@ -18,7 +18,7 @@ const Carousel = () => {
           stinctio
           itaque!
         </p>
-        <img alt="profile_carousel" src="https://a0.muscache.com/im/pictures/bd619c0e-d1a8-4673-8766-0d50394825e2.jpg?im_w=720" />
+        <img className="img_carrousel_Car " alt="profile_carousel" src="https://a0.muscache.com/im/pictures/bd619c0e-d1a8-4673-8766-0d50394825e2.jpg?im_w=720" />
         <br />
         <p>Ubicasion: </p>
         <button className="btn_carousel" onClick={() => alert('Redirigir al perfil de casa')} type="button">Ver Mas</button>
