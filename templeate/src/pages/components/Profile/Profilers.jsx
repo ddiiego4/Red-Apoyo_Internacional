@@ -1,5 +1,4 @@
 import React from 'react'
-import Title from '../Title/Title';
 import More from '../UsrProfile/More/More';
 
 const Profilers = ({ profile_Data }) => {
@@ -32,11 +31,11 @@ const Profilers = ({ profile_Data }) => {
             </div>
             <div class="menu-perfil">
               <ul>
-                <li><a href="#" title=""><i class="icono-perfil fas fa-bullhorn"></i> Publicaciones</a></li>
-                <li><a href="#" title=""><i class="icono-perfil fas fa-info-circle"></i> Comentarios
+                <li><a href="#menu" title=""><i class="icono-perfil fas fa-bullhorn"></i> Publicaciones</a></li>
+                <li><a href="#comentarios" title=""><i class="icono-perfil fas fa-info-circle"></i> Comentarios
                 </a></li>
-                <li><a href="#" title=""><i class="icono-perfil fas fa-grin"></i> Fotos</a></li>
-                <li><a href="#" title=""><i class="icono-perfil fas fa-camera"></i> Fotos</a></li>
+                <li><a href="#fotos" title=""><i class="icono-perfil fas fa-grin"></i> Fotos</a></li>
+                <li><a href="#fotos" title=""><i class="icono-perfil fas fa-camera"></i> Fotos</a></li>
               </ul>
             </div>
 

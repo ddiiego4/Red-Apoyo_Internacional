@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from 'react'
+import React, { Component} from 'react'
 import Cookies from 'universal-cookie'
 import "./UsrProfile.css"
 import UsrProfiles from './UsrProfiles'
@@ -14,8 +14,8 @@ class UsrProfile extends Component {
         dtusr: null,
       };
     
-      componentDidMount() {
-        axios
+      async useEffect() {
+       await axios
           .get(urldb)
           .then((res) => {
             this.setState({ dtusr: res.data });

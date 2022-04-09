@@ -1,4 +1,4 @@
-import React, {Component, useEffect, useState}from 'react'
+import React, {useState}from 'react'
 import More from './More/More'
 import Loader from '../Loader/Loader'
 import axios from 'axios'
@@ -16,9 +16,10 @@ function verydata(data) {
 const UsrProfiles = ({data}) => {
   const [load, setLoad] = useState(false); 
   const urldb = `https://isnft-prod.azurewebsites.net/api/users/${localStorage.getItem('id_usr')}`
-  
-  
+  var userName = "" 
 
+  var nname = "" 
+  var lastName = "" 
   verydata(data);
  
   return (
@@ -36,8 +37,8 @@ const UsrProfiles = ({data}) => {
                 </a>
             </div>
             <div class="datos-perfil">
-              <h4 class="titulo-usuario"> {data.userName}</h4>
-              <h4 class="titulo-username">{data.person.name} {data.person.lastName}</h4>
+              <h4 class="titulo-usuario"> {userName}</h4>
+              <h4 class="titulo-username">{nname} {lastName}</h4>
               <p class="bio-usuario">Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
               <ul class="lista-perfil">
                 <li>35 Seguidores</li>
@@ -52,10 +53,10 @@ const UsrProfiles = ({data}) => {
           </div>
           <div class="menu-perfil">
             <ul>
-              <li><a href="#" title=""><i class="icono-perfil fas fa-bullhorn"></i> Publicaciones</a></li>
-              <li><a href="#" title=""><i class="icono-perfil fas fa-info-circle"></i> Informacion</a></li>
-              <li><a href="#" title=""><i class="icono-perfil fas fa-grin"></i> Amigos 43</a></li>
-              <li><a href="#" title=""><i class="icono-perfil fas fa-camera"></i> Fotos</a></li>
+              <li><a href="#menu" title=""><i class="icono-perfil fas fa-bullhorn"></i> Publicaciones</a></li>
+              <li><a href="#info" title=""><i class="icono-perfil fas fa-info-circle"></i> Informacion</a></li>
+              <li><a href="#friend" title=""><i class="icono-perfil fas fa-grin"></i> Amigos 43</a></li>
+              <li><a href="#fotos" title=""><i class="icono-perfil fas fa-camera"></i> Fotos</a></li>
             </ul>
           </div>
           <div class="more_info_perfil">

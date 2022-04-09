@@ -1,19 +1,10 @@
 import React, { Component} from "react";
 import axios from "axios";
-import Cookies from "universal-cookie";
 import "./Profile.css"
 
 import Profilers from "./Profilers";
 import Headerns from "../Header/Headerns";
 import Footer from "../Footer/Footer";
-
-const cookies = new Cookies();
-
-//HAy que reparar el Menu
-function manage_states(params) {
-  console.log(params)  
-}
-
 
 export default class Profile extends Component {
   state = {
