@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import Cookies from 'universal-cookie';
+
 
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
@@ -9,13 +9,18 @@ import Map from '../Map/Map';
 import Hous from '../Hous/Hous';
 import Public from '../Publicar/Public'
 
-const cookies = new Cookies();
 
 const Layouut = () => {
+  
     const [lng, setLng] = useState({
         longitude:0,
         latitude:0
     })
+    const [menu, setMenu] = useState(true);
+    const [publicar, setPublicar] = useState(false);
+    const [Mapa, setMapa] = useState(false);
+    const [All, setAll] = useState(false);
+
 
     useEffect(()=>{
         navigator.geolocation.getCurrentPosition(
@@ -30,46 +35,53 @@ const Layouut = () => {
                 enableHighAccuracy: true
             }
             );
+            if (window.location.href === "http://localhost:3000/Products") {
+                setMenu(false);
+                setPublicar(false);
+                setMapa(false);
+                setAll(true);
+            }
+            else if(window.location.href === "http://localhost:3000/MapView"){
+                setMenu(false);
+                setPublicar(false);
+                setMapa(true);
+                setAll(false);
+            }
+            else if(window.location.href === "http://localhost:3000/Public"){
+                setMenu(false);
+                setPublicar(true);
+                setMapa(false);
+                setAll(false);
+            }else{
+                setMenu(true);
+                setPublicar(false);
+                setMapa(false);
+                setAll(false);
+            }
     });
 
-    const [menu, setMenu] = useState(true);
-    const [publicar, setPublicar] = useState(false);
-    const [Mapa, setMapa] = useState(false);
-    const [All, setAll] = useState(false);
 
 
     function manage_states(state){
 
         if(state === "menu"){
             if(!menu){
-                setPublicar(false);
-                setMapa(false);
-                setAll(false);
-                setMenu(true);
+                window.location.href="./menu"
             }
         }
         else if(state === "publicar"){
             if(!publicar){
-                setMenu(false);
-                setMapa(false);
-                setAll(false);
-                setPublicar(true);
+                window.location.href="./Public"
             }
         }
         else if(state === "Mapa"){
             if(!Mapa){
-                setMenu(false);
-                setPublicar(false);
-                setAll(false);
-                setMapa(true);
+                window.location.href="./MapView"
             }
         }
         else if(state === "All"){
             if(!All){
-                setMenu(false);
-                setPublicar(false);
-                setMapa(false);
-                setAll(true);
+                window.location.href="./Products"
             }
         }
     }
@@ -77,7 +89,7 @@ const Layouut = () => {
     return (
         <div className='container_menu'>
             <div>
-                <Header manage_states={manage_states} username={cookies.get('nombre')} />
+                <Header manage_states={manage_states} username={localStorage.getItem("name_usr")} />
             </div>
             <br />
             <br />
@@ -87,6 +99,7 @@ const Layouut = () => {
                     {publicar && <Public setPublicar={setPublicar} Location_user={lng}/>}
                     {Mapa && <Map />}
                     {All && <Hous />}
+                    
                 </div>
             </div>
             <div>

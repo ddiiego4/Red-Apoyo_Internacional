@@ -16,7 +16,7 @@ const redirect = () =>{
 export class products extends Component{
 
     componentDidMount() {
-        if (!cookies.get('username')) {
+        if (!cookies.get('id_usr_tok')) {
             window.location.href = "./menu";
         }
     }

@@ -1,7 +1,7 @@
 import React, { Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Login.css'
-import login_icoon from '../../assets/img/CEIBA.png'
+import login_icoon from '../../assets/img/CEIBA.png';
 
 import axios from 'axios';
 //import md5 from 'md5';
@@ -43,6 +43,7 @@ class Login extends Component {
             .then(response => {
                 var token = response.data;
                 cookies.set('id_usr_tok', token.accessToken, {path: "/"});
+                localStorage.setItem("mail_ctrl_usr", this.state.form.email);
                 alert(`Bienvenido`);
                 window.location.href="./menu";
             })

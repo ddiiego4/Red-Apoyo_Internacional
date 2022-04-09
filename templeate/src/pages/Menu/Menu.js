@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { Component} from 'react';
 import Cookies from 'universal-cookie';
 import Carousel from '../components/Carousel/Carousel';
@@ -10,12 +11,23 @@ const cookies = new Cookies();
 
 class Menu extends Component {
 
-   
-
     componentDidMount() {
         if (!cookies.get("id_usr_tok")) {
                window.location.href = "./";
             }
+        const lstorage = localStorage.getItem("mail_ctrl_usr");
+        axios
+        .get("https://isnft-prod.azurewebsites.net/api/users")
+        .then((res) =>{
+            const data = res.data.result;
+
+            for (let index = 0; index < data.length; index++) {
+                if (lstorage === data[index].email) {
+                    localStorage.setItem("id_usr", data[index].id)
+                }
+            }
+        })
+        .catch((err) => console.log(err))
         }
 
     render() {

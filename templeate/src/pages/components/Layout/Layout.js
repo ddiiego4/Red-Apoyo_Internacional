@@ -26,6 +26,7 @@ class Layout extends Component {
         if (!cookies.get('id_usr_tok')) {
             window.location.href = "./";
         }
+        
     }
 
     render() {

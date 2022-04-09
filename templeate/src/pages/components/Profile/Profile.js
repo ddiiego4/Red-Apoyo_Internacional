@@ -4,7 +4,7 @@ import Cookies from "universal-cookie";
 import "./Profile.css"
 
 import Profilers from "./Profilers";
-import Header from "../Header/Header";
+import Headerns from "../Header/Headerns";
 import Footer from "../Footer/Footer";
 
 const cookies = new Cookies();
@@ -41,9 +41,9 @@ export default class Profile extends Component {
       <>
         <div className="container_menu">
           <div>
-            <Header
-              manage_states={manage_states}
-              username={cookies.get("nombre")}
+            <Headerns
+              //manage_states={manage_states}
+              username={localStorage.getItem("name_usr")}
             />
           </div>
           <br />

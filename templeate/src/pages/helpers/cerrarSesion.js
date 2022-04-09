@@ -4,5 +4,5 @@ const cookies = new Cookies();
 
 export function cerrarSesion() {
     cookies.remove('id_usr_tok', { path: "/" });
-    window.location.href = './';
+    window.location.href = '/';
 }
