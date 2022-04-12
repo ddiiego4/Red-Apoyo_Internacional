@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import "./Select.css"
 
-export default class Select extends Component {
+class Selecct extends Component {
 
   state = {
     Contry : []
@@ -33,3 +33,5 @@ render(){
     )
   }
 }
+
+export default Selecct;

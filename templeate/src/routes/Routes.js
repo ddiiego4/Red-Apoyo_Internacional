@@ -29,8 +29,7 @@ function Routes() {
       
         <Route exact path="/Products/:id" component={Profile}/>
         <Route exact path="/usrprofile/:id" component={UsrProfile}/>
-        
-        <Route exact path={"/Search_House"} component={Search_House} />
+
         <Route exact path={"/Calificacion_Estadia"} component={Calificacion_Estadia} />
         <Route exact path={"/Calificacion_Huesped"} component={Calificacion_Huesped} />
         

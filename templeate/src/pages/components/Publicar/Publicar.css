@@ -1,6 +1,4 @@
 .container_publicar {
-    width: 900px;
-    height: auto;
     margin: auto;
     margin-top: 60px;
     background: #d7d7d740;
@@ -39,4 +37,8 @@
 
 .locationss {
     display: flex;
+}
+
+.rent2 {
+    display:none;
 }

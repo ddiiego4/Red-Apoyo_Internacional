@@ -47,33 +47,33 @@ const CreateHouse = (data, setErr, setForm, location) => {
   console.log(state.datos)
 
     
-   // axios
-     //   .post(DbUrl, state.datos
-       //   , {
-         //     headers:heade
-          //}
-          //)
-            //.then(response => {
-              // console.log(response.data);
-              //})
-            //.catch(error => {
-              //  console.log(error);
-            //})
+    axios
+        .post(DbUrl, state.datos
+          , {
+              headers:heade
+          }
+          )
+            .then(response => {
+               console.log(response.data);
+              })
+            .catch(error => {
+                console.log(error);
+            })
 
-      let formdata = new FormData()
+      //let formdata = new FormData()
       
-      formdata.append("file", parse_text[2])
-      axios({
-        url: photoUrl,
-        method: "POST",
-        headers : heade,
-        data: formdata,
+     // formdata.append("file", parse_text[2])
+      //axios({
+        //url: photoUrl,
+        //method: "POST",
+        //headers : heade,
+        //data: formdata,
         
-      })
-      .then((res) =>{
-        console.log(res)
-      })
-      .catch((er) => console.log(er))
+      //})
+      //.then((res) =>{
+       // console.log(res)
+     // })
+      //.catch((er) => console.log(er))
 
   /*let state = {
     datos: {

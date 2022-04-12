@@ -24,6 +24,7 @@ class Menu extends Component {
             for (let index = 0; index < data.length; index++) {
                 if (lstorage === data[index].email) {
                     localStorage.setItem("id_usr", data[index].id)
+                    localStorage.setItem("data_person", JSON.stringify(data));
                 }
             }
         })

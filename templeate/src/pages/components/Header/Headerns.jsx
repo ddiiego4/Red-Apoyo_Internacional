@@ -27,11 +27,11 @@ const Header = ({manage_states, username }) => {
                 <div className="control_btn_search">
                     <div className="head_btns">
                         <nav className="sections">
-                            <div class="btn-group" role="group" aria-label="Basic outlined example">
-                                <button onClick={() => window.location.href="/menu"} type="button" class="btn btn-outline-primaryy">Inicio</button>
-                                <button onClick={() => window.location.href="/Public"} type="button" class="btn btn-outline-primaryy">Publicar</button>
-                                <button onClick={() => window.location.href="/MapView"} type="button" class="btn btn-outline-primaryy">Buscar Por Mapa</button>
-                                <button onClick={() => window.location.href="/Products"} type="button" class="btn btn-outline-primaryy">Listar Todo</button>
+                            <div className="btn-group" role="group" aria-label="Basic outlined example">
+                                <button onClick={() => window.location.href="/menu"} type="button" className="btn btn-outline-primaryy">Inicio</button>
+                                <button onClick={() => window.location.href="/Public"} type="button" className="btn btn-outline-primaryy">Publicar</button>
+                                <button onClick={() => window.location.href="/MapView"} type="button" className="btn btn-outline-primaryy">Buscar Por Mapa</button>
+                                <button onClick={() => window.location.href="/Products"} type="button" className="btn btn-outline-primaryy">Listar Todo</button>
                             </div>
                         </nav>
                     </div>
@@ -40,14 +40,14 @@ const Header = ({manage_states, username }) => {
 
                 </div>
 
-                <div class="nav_principall">
+                <div className="nav_principall">
                     <nav className="sections">
                         <ul>
                                 <li>
                                     <div className="aref" href="#">{localStorage.getItem("name_usr")}</div>
                                 </li>
                             <div className="aref_back" onClick={clic_perfil}>
-                                <i  className="aref_back_list_icon" class="bi bii-list"  ></i>
+                                <i  className="aref_back_list_icon" className="bi bii-list"  ></i>
                                 <li>
                                     
                                         <button className="btn usr_btn_menu" ></button>

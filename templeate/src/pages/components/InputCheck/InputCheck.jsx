@@ -19,16 +19,16 @@ const InputCheck = ({form, handlechange, setForm}) => {
 
     return (
     <div>
-        <div class="form-check form-switch">
+        <div className="form-check form-switch">
                 <input
-                  class="form-check-input"
+                  className="form-check-input"
                   type="checkbox"
                   id="flexSwitchCheckChecked"
                   name="Estado"
                   onClick={() => upHouse()}
                   handlechange={handlechange}
                 ></input>
-                <label class="form-check-label" for="flexSwitchCheckChecked">
+                <label className="form-check-label" >
                   Disponibilidad
                 </label>
               </div>

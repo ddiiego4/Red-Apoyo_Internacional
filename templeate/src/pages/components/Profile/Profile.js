@@ -5,27 +5,23 @@ import "./Profile.css"
 import Profilers from "./Profilers";
 import Headerns from "../Header/Headerns";
 import Footer from "../Footer/Footer";
+const DbUrl2 = "https://isnft-prod.azurewebsites.net/api/users";
 
 export default class Profile extends Component {
   state = {
-    Profiles: [],
-  };
+    Houses: [],
+    load: true
+}
 
-  componentDidMount() {
-    const path = window.location.pathname;
-    const text_splite = path.split("/");
-    console.log(text_splite[2]);
-    const DbUrl = `http://localhost:3003/houses/${text_splite[2]}`
-   // const DbUrl2 = `https://isnft-prod.azurewebsites.net/api/houses/${text_splite[2]}`
-    axios
-      .get(DbUrl)
-      .then((res) => {
-        this.setState({ Profiles: res.data });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }
+componentDidMount() {
+    axios.get(DbUrl2).then(res => {
+        //console.log("VIene la data");
+        //console.log(res.data.result);
+        this.setState({ Houses: res.data, load: false });
+        console.log("se monto el componente");
+        console.log(res.data);
+    });
+}
 
   render() {
     return (

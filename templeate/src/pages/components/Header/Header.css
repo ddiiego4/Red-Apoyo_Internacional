@@ -58,6 +58,8 @@ header_col2 {
   border-color: #9b98a7;
   border-end-end-radius: 150px;
   border-end-start-radius: 150px;
+  font-size: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 
@@ -194,3 +196,4 @@ label {
   position: absolute;
   left: 22px;
 }
+

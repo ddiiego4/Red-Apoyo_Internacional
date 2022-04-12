@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Select from "../Select/Select";
+import Selecct from "../Select/Select";
 import SelectLi from "../Select/SelectLi";
 import Input from "../Input/Input";
 import InputN from "../Input/InputN";
@@ -31,7 +31,7 @@ const Publicar = ({
 
   function public_house(form, setErr, setForm, setPublicar, Publica, location) {
     CreateHouse(form, setErr, setForm, location);
-   //console.log(location)
+    //console.log(location)
     setLoad(true);
     setTimeout(() => {
       setLoad(false);
@@ -43,12 +43,14 @@ const Publicar = ({
       <div className="Load_p">{Load && <Loader />}</div>
       <div className="Formulario_inputs">
         <Title title={page_name} />
+        <div className="rent2">
+            <img src={Rent} alt="Rentar_Hogar"></img>
+          </div>
 
         <form onSubmit={handleSubmit} className="form_dist">
           <div className="rent">
             <img src={Rent} alt="Rentar_Hogar"></img>
           </div>
-
           <div>
             <div className="In_puts">
               <Input
@@ -76,31 +78,29 @@ const Publicar = ({
               <br />
               <br />
             </div>
+            <div className="locationss">
+              <div className="In_puts" onChange={handleChange}>
+                <Selecct
+                  atributos={{
+                    id: "Country",
+                    name: "countyId",
+                    placeholder: "Country",
+                  }}
+                ></Selecct>
+                <br></br>
+              </div>
 
-<div className="locationss">
-
-            <div className="In_puts" onChange={handleChange}>
-              <Select
-                atributos={{
-                  id: "Country",
-                  name: "countyId",
-                  placeholder: "Country",
-                }}
-              ></Select>
-              <br></br>
+              <div className="In_puts" onChange={handleChange}>
+                <SelectLi
+                  atributos={{
+                    id: "Citi",
+                    name: "citiId",
+                    placeholder: "City",
+                  }}
+                ></SelectLi>
+                <br></br>
+              </div>
             </div>
-
-            <div className="In_puts" onChange={handleChange}>
-              <SelectLi
-                atributos={{
-                  id: "Citi",
-                  name: "citiId",
-                  placeholder: "City",
-                }}
-              ></SelectLi>
-              <br></br>
-            </div>
-        </div>
 
             <div className="In_puts" onChange={handleChange}>
               <InputCheck
@@ -151,11 +151,11 @@ const Publicar = ({
               <br></br>
             </div>
             <div>
-              <div class="mb-3">
-                <label for="formFileMultiple" class="form-label">
+              <div className="mb-3">
+                <label className="form-label">
                   Inserta tus Fotos
                 </label>
-                <div onChange={handleChange}><InputImg/></div>
+                <div onChange={handleChange}><InputImg /></div>
               </div>
 
               <br></br>

@@ -7,7 +7,7 @@ const InputImg = () => {
   return (
     <div>
       <input
-        class="form-control photoss"
+        className="form-control photoss"
         type="file"
         id="formFileMultiple"
         name="url"

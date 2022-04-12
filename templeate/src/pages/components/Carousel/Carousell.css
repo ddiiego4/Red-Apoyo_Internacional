@@ -40,8 +40,9 @@
 }
 
 .container_carousel {
-    width: 57%;
-    margin-top: 12px;
+    width: 45%;
+    margin: auto;
+    margin-top: 33px;
 }
 .carddd {
     margin: auto;

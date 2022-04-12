@@ -25,34 +25,34 @@ const Header = ({manage_states, username }) => {
                 <div className="control_btn_search">
                     <div className="head_btns">
                         <nav className="sections">
-                            <div class="btn-group" role="group" aria-label="Basic outlined example">
-                                <button onClick={() => manage_states("menu")} type="button" class="btn btn-outline-primaryy">Inicio</button>
-                                <button onClick={() => manage_states("publicar")} type="button" class="btn btn-outline-primaryy">Publicar</button>
-                                <button onClick={() => manage_states("Mapa")} type="button" class="btn btn-outline-primaryy">Buscar Por Mapa</button>
-                                <button onClick={() => manage_states("All")} type="button" class="btn btn-outline-primaryy">Listar Todo</button>
+                            <div className="btn-group" role="group" aria-label="Basic outlined example">
+                                <button onClick={() => manage_states("menu")} type="button" className="btn btn-outline-primaryy">Inicio</button>
+                                <button onClick={() => manage_states("publicar")} type="button" className="btn btn-outline-primaryy">Publicar</button>
+                                <button onClick={() => manage_states("Mapa")} type="button" className="btn btn-outline-primaryy">Buscar Por Mapa</button>
+                                <button onClick={() => manage_states("All")} type="button" className="btn btn-outline-primaryy">Listar Todo</button>
                             </div>
                         </nav>
                     </div>
 
-                    <form type="submit" class="form-inline my-2 my-lg-0">
-                        <div class="input-group rounded">
-                            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-                            <span class="input-group-textt border-0" id="search-addon">
-                                <i onClick={() => alert('Iniciar la busqueda')} class="gg-search"></i>
+                    <form type="submit" className="form-inline my-2 my-lg-0">
+                        <div className="input-group rounded">
+                            <input type="search" className="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                            <span className="input-group-textt border-0" id="search-addon">
+                                <i onClick={() => alert('Iniciar la busqueda')} className="gg-search"></i>
                             </span>
                         </div>
                     </form>
 
                 </div>
 
-                <div class="nav_principall">
+                <div className="nav_principall">
                     <nav className="sections">
                         <ul>
                                 <li>
                                     <div className="aref" href="#">{username}</div>
                                 </li>
                             <div className="aref_back" onClick={clic_perfil}>
-                                <i  className="aref_back_list_icon" class="bi bii-list"  ></i>
+                                <i  className="aref_back_list_icon bi bii-list"  ></i>
                                 <li>
                                     
                                         <button className="btn usr_btn_menu" ></button>
