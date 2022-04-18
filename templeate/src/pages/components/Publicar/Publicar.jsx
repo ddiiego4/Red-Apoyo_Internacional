@@ -27,12 +27,11 @@ const Publicar = ({
   location,
 }) => {
   const [Load, setLoad] = useState(false);
-  const [Lng, setLng] = useState(false);
 
   function public_house(form, setErr, setForm, setPublicar, Publica, location) {
-    CreateHouse(form, setErr, setForm, location);
     //console.log(location)
     setLoad(true);
+    CreateHouse(form, setErr, setForm, location);
     setTimeout(() => {
       setLoad(false);
     }, 2000);
@@ -70,7 +69,7 @@ const Publicar = ({
                   id: "precio",
                   name: "price",
                   type: "text",
-                  placeholder: "Costo",
+                  placeholder: "Costo por noche",
                   onChange: handleChange,
                 }}
               />

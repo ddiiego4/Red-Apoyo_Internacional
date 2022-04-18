@@ -40,9 +40,14 @@
 }
 
 .container_carousel {
-    width: 45%;
+    width: 86%;
     margin: auto;
-    margin-top: 33px;
+    margin-top: 73px;
+    margin-bottom: -88px;
+    border-radius: 34px 188px 34px 188px;
+    background: #ab9e9e94;
+    box-shadow: 0px 0px 222px -39px;
+    opacity: 0.7;
 }
 .carddd {
     margin: auto;
@@ -67,4 +72,31 @@
     border: none;
     box-shadow: 0px 0px 10px 1px;
     font-family: -webkit-body;
+}
+
+.imgcontrol{
+    height: auto;
+    margin: auto;
+    width: 70%;
+    border-radius: 12px 12px 12px 12px;
+    box-shadow: 0px 0px 137px 1px;
+}
+
+.titl{
+    font-size: 100px;
+    color: #ffffffcc;
+}
+
+.parrafos {
+    margin-top: 0;
+    margin-bottom: 2px;
+    color: antiquewhite;
+    font-size: 26px;
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0px 164px 0px 159px;
 }

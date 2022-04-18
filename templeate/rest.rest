@@ -17,5 +17,6 @@ Authorization: Hola
 }
 
 ### GET 
-GET https://isnft-prod.azurewebsites.net/api/users
+DELETE  https://isnft-prod.azurewebsites.net/api/houses/12
 Content-Type: application/json
+Authorization: Hola

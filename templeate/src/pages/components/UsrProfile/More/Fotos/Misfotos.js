@@ -1,8 +1,8 @@
 import React, { Component , useEffect, useState} from 'react'
-import MoreInfo from './MoreInfo';
+import MoreInfo from '../MoreInfo';
 import axios from 'axios';
 import "./More.css"
-import Loader from '../../Loader/Loader';
+import Loader from '../../../Loader/Loader';
 
 const urldb = `https://isnft-prod.azurewebsites.net/api/users/${localStorage.getItem('id_usr')}`
 
@@ -16,7 +16,7 @@ function verydata(data) {
     }
   }
 
-const More = () => {
+const Misfotos = ({setdat}) => {
     const [info, setinfo] = useState([{load:true}])
     const [mrinfo, setmrinfo] = useState(false);
 
@@ -27,8 +27,9 @@ const More = () => {
             //console.log("VIene la data");
             //console.log(res.data.result);
             setinfo({ dtusrrr: res.data.person, load: false });
+            setdat(res.data.person);
             if (info) {
-                setmrinfo(true);
+                setmrinfo(true);         
             }
         });
     },[]);
@@ -43,4 +44,4 @@ const More = () => {
 }
 
 
-export default More; 
+export default Misfotos; 

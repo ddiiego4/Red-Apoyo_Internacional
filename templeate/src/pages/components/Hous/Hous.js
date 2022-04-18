@@ -21,8 +21,6 @@ export default class Hous extends Component {
             //console.log("VIene la data");
             //console.log(res.data.result);
             this.setState({ Houses: res.data, load: false });
-            console.log("se monto el componente");
-            console.log(res.data);
         });
     }
 

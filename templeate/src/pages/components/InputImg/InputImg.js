@@ -1,9 +1,7 @@
 import React from "react";
 
 const InputImg = () => {
-    const register = (data) =>{
-        console.log(data)
-    }
+ 
   return (
     <div>
       <input
@@ -11,7 +9,6 @@ const InputImg = () => {
         type="file"
         id="formFileMultiple"
         name="url"
-        ref={register}
         multiple
       ></input>
     </div>

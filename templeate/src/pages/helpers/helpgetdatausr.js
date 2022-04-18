@@ -1,13 +1,19 @@
-import React from 'react'
+import axios from "axios";
 
-const helpgetdatausr = ({data}) => {
+export default function getUserData(id_user, setdata) {
+    const url = "https://isnft-prod.azurewebsites.net/api/users"
+    console.log(id_user);
+    axios
+    .get(url)
+    .then((resp) => {
+        console.log(resp.data.result)
+        for (let index = 0; index < resp.data.result.length; index++) {
+            const element = resp.data.result[index];
+            if(element.person.id === id_user){
+                window.location.href = `/usrprofilepublic/${element.id}`
+            }
+        }
+    })
+    .catch((err) => console.log(err))
 
-    const getdata = ({data}) =>{
-        console.log(data);
-    }
-    const savedata = ({data}) =>{
-        console.log(data);
-    }
 }
-
-export default helpgetdatausr

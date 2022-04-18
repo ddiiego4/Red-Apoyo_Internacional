@@ -25,6 +25,9 @@ body {
     font-family: "Arial", Segoe UI, Tahoma, sans-serifl, Helvetica Neue, Helvetica;
 }
 
+
+
+
 .perfil-usuario {
     background: linear-gradient(#78787842, transparent);
     color: #333;
@@ -48,6 +51,7 @@ body {
 
 .perfil-usuario img {
     width: 100%;
+    opacity: 0.6;
 }
 
 .contenedor-perfil {
@@ -71,6 +75,7 @@ body {
     position: relative;
     height: 17rem;
     margin-bottom: .5rem;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/6908/6908753.png');
 }
 
 .perfil-usuario .avatar-perfil {
@@ -175,27 +180,40 @@ body {
 .perfil-usuario .menu-perfil ul {
     display: flex;
     list-style: none;
-    margin-left: calc(200px + 8rem);
     width: calc(100% - 200px - 8rem);
+    font-size: 14px;
+    margin-left: 129px;
+    margin-top: 67px;
+   
 }
 
 .perfil-usuario .menu-perfil ul li {
-    margin-right: 1rem;
+    display: flex;
+    justify-content: center;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    margin: auto;
+    margin-left: -7px;
+    text-align: center;
+ 
 }
 
 .perfil-usuario .menu-perfil a {
     display: block;
     text-decoration: none;
     color: inherit;
-    padding: 8px 20px;
+    padding: 3px 6px;
     font-weight: bold;
     border-radius: 8px;
     transition: all ease-in 100ms;
+    width: 167px;
 }
 
 .perfil-usuario .menu-perfil a:hover {
-    background-color: #4CB0C6;
-    color: #fff;
+    box-shadow: 0px 2px 0px 0px;
+    border-top: none;
+    color: #48707347;
 }
 
 .perfil-usuario .icono-perfil {
@@ -282,4 +300,10 @@ body {
     left: 1rem;
     opacity: 0.5;
     z-index: 1000;
+}
+
+.load_all_houses{
+margin-top: 160px;
+margin-bottom: -10px;
+    
 }

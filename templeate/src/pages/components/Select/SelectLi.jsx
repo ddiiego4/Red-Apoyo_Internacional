@@ -12,7 +12,7 @@ export default class SelectLi extends Component {
     axios
       .get("https://isnft-prod.azurewebsites.net/api/country")
       .then((resp) => {
-        this.setState({ Country: 2 });
+        this.setState({ Country: 0 });
         this.setState({ Cities: resp.data[this.state.Country].cities });
       })
       .catch((er) => {

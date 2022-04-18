@@ -24,7 +24,9 @@ class Menu extends Component {
             for (let index = 0; index < data.length; index++) {
                 if (lstorage === data[index].email) {
                     localStorage.setItem("id_usr", data[index].id)
-                    localStorage.setItem("data_person", JSON.stringify(data));
+                    localStorage.setItem("ownerID", data[index].person.id)
+                    localStorage.setItem("username", data[index].person.name )
+                    localStorage.setItem("lastName" , data[index].person.lastName)
                 }
             }
         })
@@ -43,11 +45,9 @@ class Menu extends Component {
 
                             <div className='row'>
                                 <Carousel />
-                                <div className='col'>
-                                    <Carousel />
-                                </div>
                             </div>
-                            <Pagination />
+
+
                         </div>
                     </div>
                 </div>

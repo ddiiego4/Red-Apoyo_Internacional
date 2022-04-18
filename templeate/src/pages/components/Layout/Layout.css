@@ -20,13 +20,14 @@ div.logo_navbar {
 .usr_btn_menu {
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(https://cdn-icons-png.flaticon.com/512/1177/1177568.png);
-    margin-top: 3px;
-    margin-left: 17px;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/1177/1177568.png');
+    margin-top: 0px;
+    margin-left: 29px;
     height: 32px;
     width: 30px;
     
 }
+
 
 .container_menu {
 
@@ -282,6 +283,79 @@ div.logo_navbar {
     }
 }
 
+@media (max-width: 780px) {
+
+    .perfil-house .datos-perfil {
+        position: absolute;
+        left: 0px;
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+        top: 105%;
+    }
+    .perfil-house .contenedor-perfil {
+        width: 100%;
+    }
+
+    .perfil-house .avatar-perfil {
+        left: calc(50% - 115px)
+    }
+
+    .perfil-house .bio-usuario {
+        font-size: 1em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .perfil-house .titulo-usuario {
+        font-size: 2.1rem;
+    }
+    .perfil-house .portada-perfil-house {
+        display: block;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        height: 17rem;
+        margin-bottom: 0.5rem;
+        background-image: url('https://icdn.dtcn.com/image/digitaltrends_es/2-229-500x500.jpg');
+        opacity: 0.7;
+        width: 100%;
+        margin-bottom: 411px;
+    }
+
+    .perfil-house .menu-perfil ul {
+        flex-direction: column;
+    }
+
+    .perfil-house .lista-perfil {
+        display: block;
+    }
+
+    .perfil-house .menu-perfil {
+        margin-top: 2rem;
+    }
+
+    .perfil-house .menu-perfil ul {
+        display: flex;
+        list-style: none;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 2.5rem;
+        width: 70%;
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: 0 0 12px 2px rgba(0, 0, 0, .1);
+    }
+
+    .perfil-house .icono-perfil {
+        display: inline-block;
+    }
+}
+
+
+
 @media (max-width:750px){
   
     .control_btn_search {
@@ -472,8 +546,22 @@ div.logo_navbar {
         width: 200px;
     }
     .Sections {
-        width: 600px;
+        width: 100%;
     }
+    .container_comentario {
+        background-color: #7d7d7e9c;
+        width: 100%;
+        margin: auto;
+        margin-bottom: 5px;
+        margin-top: 10px;
+        border-radius: 13px 73px 0px 55px;
+        box-shadow: 0px 0px 62px -10px;
+        font-size: 15px;
+        color: black;
+    }
+
+
+
 }
 
 @media (max-width:550px){
@@ -522,7 +610,7 @@ div.logo_navbar {
         width: 200px;
     }
     .Sections {
-        width: 550px;
+        width: 100%;
     }
 }
 
@@ -566,7 +654,7 @@ div.logo_navbar {
         width: 200px;
     }
     .Sections {
-        width: 500px;
+        width: 100%;
     }
     .container_carousel {
         width: 100%;
@@ -587,7 +675,7 @@ div.logo_navbar {
         font-size: 15px;
     }    
     .Sections {
-        width: 450px;
+        width: 100%;
     }
     .container_carousel {
         width: 100%;
@@ -604,7 +692,7 @@ div.logo_navbar {
         font-size: 15px;
     }    
     .Sections {
-        width: 400px;
+        width: 100%;
     }
     .container_menu {
         align-content: center;
@@ -633,7 +721,7 @@ div.logo_navbar {
         font-size: 15px;
     }
     .Sections {
-        width: 388px;
+        width: 100%;
     }
 }
 
@@ -665,6 +753,9 @@ div.logo_navbar {
         width: 45%;
         margin: auto;
         margin-top: 33px;
+    }
+    .Sections{
+        width: 100%;
     }
 }
 
@@ -702,6 +793,9 @@ div.logo_navbar {
         width: 45%;
         margin: auto;
         margin-top: 33px;
+    }
+    .Sections{
+        width: 100%;
     }
     
     

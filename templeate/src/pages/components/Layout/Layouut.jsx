@@ -35,19 +35,19 @@ const Layouut = () => {
                 enableHighAccuracy: true
             }
             );
-            if (window.location.href === "http://localhost:3000/Products") {
+            if (window.location.pathname === "/Products") {
                 setMenu(false);
                 setPublicar(false);
                 setMapa(false);
                 setAll(true);
             }
-            else if(window.location.href === "http://localhost:3000/MapView"){
+            else if(window.location.pathname === "/MapView"){
                 setMenu(false);
                 setPublicar(false);
                 setMapa(true);
                 setAll(false);
             }
-            else if(window.location.href === "http://localhost:3000/Public"){
+            else if(window.location.pathname === "/Public"){
                 setMenu(false);
                 setPublicar(true);
                 setMapa(false);
@@ -58,7 +58,7 @@ const Layouut = () => {
                 setMapa(false);
                 setAll(false);
             }
-    });
+    }, []);
 
 
 

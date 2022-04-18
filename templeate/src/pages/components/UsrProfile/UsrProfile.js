@@ -22,8 +22,8 @@ class UsrProfile extends Component {
             //console.log("VIene la data");
             //console.log(res.data.result);
             this.setState({ dtusr: res.data, load: false });
-            console.log("se monto el componente");
-            console.log(res.data);
+            
+            
         });
     }
 
@@ -44,13 +44,13 @@ class UsrProfile extends Component {
                     <div className='Sections'>
                         <div className='container_profile_usr'>
                             {this.state.load && (<><div className="load_all_houses"><Loader /><Message Mensaje={"Buscaremos por ti...."} ></Message></div></>)}
-                            <UsrProfiles />
+                            <UsrProfiles  />
                         </div>
                     </div>
                 </div>
                 <div>
                 </div>
-                <div>
+                <div className='foott_pub'>
                     <Footer />
                 </div>
             </div>

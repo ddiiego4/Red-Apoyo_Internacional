@@ -1,5 +1,11 @@
 
-
+footer {
+   margin-top: 90px;
+    bottom: 0;
+    width: 100%;
+    
+ 
+}
 
 .icons_foot {
     color: #403939;
@@ -8,6 +14,7 @@
 img, svg {
     vertical-align: middle;
     margin-right: 10px;
-    width: 22px;
+ 
     height: auto;
 }
+

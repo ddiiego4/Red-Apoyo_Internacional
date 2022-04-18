@@ -1,27 +1,27 @@
-import React, { Component} from "react";
+import React, { Component } from "react";
 import axios from "axios";
 import "./Profile.css"
 
 import Profilers from "./Profilers";
 import Headerns from "../Header/Headerns";
 import Footer from "../Footer/Footer";
-const DbUrl2 = "https://isnft-prod.azurewebsites.net/api/users";
 
 export default class Profile extends Component {
   state = {
     Houses: [],
     load: true
-}
+  }
 
-componentDidMount() {
-    axios.get(DbUrl2).then(res => {
-        //console.log("VIene la data");
-        //console.log(res.data.result);
-        this.setState({ Houses: res.data, load: false });
-        console.log("se monto el componente");
-        console.log(res.data);
-    });
-}
+  componentDidMount() {
+    const id_house = window.location.pathname.split("/")[2]
+    const DbUrl = `https://isnft-prod.azurewebsites.net/api/houses/${id_house}`;
+    console.log(DbUrl)
+    axios
+    .get(DbUrl)
+      .then(res => {
+       this.setState({ Houses: res.data, load: false });
+      });
+  }
 
   render() {
     return (
@@ -37,7 +37,7 @@ componentDidMount() {
           <br />
           <div>
             <div className="Sections">
-              <Profilers profile_Data={this.state.Profiles} />
+              <Profilers profile_Data={this.state.Houses}  />
             </div>
           </div>
           <div></div>
