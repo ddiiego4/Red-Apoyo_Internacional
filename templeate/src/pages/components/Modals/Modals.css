@@ -2,8 +2,8 @@
 .container_modal{
     
     position: absolute;
-    width: 77%;
-    height: 77%;
+    width: auto;
+    height: auto;
     margin: auto;
     margin-top: 70px;
     margin-bottom: 90px;

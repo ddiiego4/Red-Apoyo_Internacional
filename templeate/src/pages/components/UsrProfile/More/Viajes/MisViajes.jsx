@@ -28,8 +28,10 @@ const MisViajes = ({ dataausr }) => {
     <div className='container_more_info'>
       <div className='row'>{dataausr.leases.map((item, index) => (
         <div key={index} className="col">
-          <div className="card">
-            <Title title={item.house.description.split("-")[0]} ></Title>
+          <div className="card"><div style={{background: "#6e5c5c5c",borderRadius: "0px 0px 28px 28px"}} >
+            
+             <Title  title={item.house.description.split("-")[0]} ></Title>
+            </div>
             <h5 className="card-title">{item.isApproved === true? <> <h1 style={{color:"green"}} >Aprovada!</h1>   <IoMdCheckmarkCircleOutline></IoMdCheckmarkCircleOutline> </>:( item.isApproved === null ? <> <div  > <Message Mensaje={"Solicitud en espera ..."} ></Message><AiOutlineIssuesClose></AiOutlineIssuesClose></div></> : <> <div> <Message > <h1 style={{color:"red"}}>No aprovado<IoIosCloseCircleOutline></IoIosCloseCircleOutline></h1></Message> </div></>  )}</h5>
 
 

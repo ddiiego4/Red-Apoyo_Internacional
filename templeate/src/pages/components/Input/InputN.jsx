@@ -15,6 +15,7 @@ const InputN = ({atributo, Error_H, parametro , icon}) => {
                 aria-describedby="basic-addon1"
                 onChange={atributo.onChange}
                 autoComplete="off"
+                value={atributo.value}
                 
              />
         </div>

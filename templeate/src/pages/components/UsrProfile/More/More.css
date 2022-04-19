@@ -3,7 +3,9 @@
 }
 
 .container_more_info{
-    width: 100%;
+    width: 80%;
+    margin: auto;
+    display: inline-flex;
     
 }
 

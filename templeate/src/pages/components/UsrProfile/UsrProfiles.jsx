@@ -129,20 +129,13 @@ const UsrProfiles = () => {
                   <GiCommercialAirplane style={{marginLeft:"8px"}}></GiCommercialAirplane>
                 </a>
               </li>
-              <li>
-                <a href="#fotos" title="" style={{width:"140px", marginRight:"-36px" , marginLeft:"-19px"}}>
-                  <i className="icono-perfil fas fa-camera">
-                  </i> Fotos
-                  <HiOutlinePhotograph style={{marginLeft:"8px"}} ></HiOutlinePhotograph>
-                </a>
-              </li>
             </ul>
           </div>
           <div className="more_info_perfil">
             {
               Publicasion.MisPublicasiones &&  <>
               
-              { db &&<>  <Title title={"Mis publicasiones"} ></Title> <Mispublicasiones setdat={setdb} />
+              { db &&<> <div style={{boxShadow: "0px 10px 20px 0px", width: "41%",margin: "auto", borderRadius: "0px 0px 30px 30px"}} > <Title title={"Mis publicasiones"} ></Title></div> <Mispublicasiones setdat={setdb} />
              </>
               }
               </>
@@ -151,14 +144,14 @@ const UsrProfiles = () => {
             {
               Arriendos.MisArriendos && <>
                
-              { db && <> <Title title={"Mis Arriendos"} ></Title> <Misarriendos setdat={setdb} /></>
+              { db && <><div  style={{boxShadow: "0px 10px 20px 0px", width: "41%",margin: "auto", borderRadius: "0px 0px 30px 30px"}}> <Title title={"Mis Arriendos"} ></Title> </div><Misarriendos setdat={setdb} /></>
               }
               
               </>
             }
 
             {
-              Viajes.MisViajes && <> <Title title={"Mis Viajes"} ></Title><Misviajes setdat={setdb}></Misviajes></>
+              Viajes.MisViajes && <> <div  style={{boxShadow: "0px 10px 20px 0px", width: "41%",margin: "auto", borderRadius: "0px 0px 30px 30px"}}> <Title title={"Mis Viajes"} ></Title> </div> <Misviajes setdat={setdb}></Misviajes></>
             }
             
           </div>

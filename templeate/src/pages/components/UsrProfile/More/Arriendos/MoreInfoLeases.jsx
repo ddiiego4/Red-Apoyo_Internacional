@@ -13,7 +13,7 @@ const MoreInfoLeases = ({ dataausr }) => {
       <div className='row'>{dataausr.leases.map((item, index) => (
         <div key={index} className="col">
           <div className="card">
-          <div>
+          <div style={{background: "#6e5c5c5c",borderRadius: "0px 0px 28px 28px"}}>
               <h1>
               {item.house.description.split("-")[0]}
               </h1>

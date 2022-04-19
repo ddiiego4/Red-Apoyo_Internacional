@@ -19,8 +19,7 @@ class UsrProfile extends Component {
 
     componentDidMount() {
         axios.get(urldb).then(res => {
-            //console.log("VIene la data");
-            //console.log(res.data.result);
+          
             this.setState({ dtusr: res.data, load: false });
             
             

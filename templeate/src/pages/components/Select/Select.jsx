@@ -23,7 +23,7 @@ render(){
    
     return (
       <div className='country_control'>
-        <select name="country" type="submit" className='form-control' > 
+        <select name="country" type="submit" className='form-control' value={1} > 
           {this.state.Contry.map((item, index) =>
               <><option key={index} value={item.id}>{item.name}</option>
              </>

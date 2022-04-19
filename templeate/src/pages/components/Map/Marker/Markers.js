@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import {IconLocation} from "./IconLocation"
+import {FaBath} from "react-icons/fa"
+import { MdMeetingRoom} from "react-icons/md"
 import { Marker, Popup } from "react-leaflet";
 import axios from "axios";
 
-const Markers = () => {
-  const position = [-33.386740, -70.624847];
+const Markers = ({data}) => {
+  const position = [data.latitude, data.longitude];
   const [housesdb, sethousesdb] = useState({})
 
   useEffect(() =>{
@@ -25,11 +27,35 @@ const Markers = () => {
    
   <Marker position={position} icon={IconLocation} >
   <Popup>
-      Nuestra publicacion guardada en mapa. <br /> Test house.
+      {
+        data.description.split("-")[0]
+      } <br />
       <br></br>
       
-      <img className="img_map_available" alt="nueva imagen" src="https://news.airbnb.com/wp-content/uploads/sites/4/2020/05/Airbnb-Beachfront-Greece.jpg?fit=2662,1776"></img>
+      {
+        data.photos.length === 0 ?    <img className="img_map_available" alt="nueva imagen" src="https://news.airbnb.com/wp-content/uploads/sites/4/2020/05/Airbnb-Beachfront-Greece.jpg?fit=2662,1776"></img> :    <img className="img_map_available" alt="nueva imagen" src={data.photos[0].url}></img> 
+      }
+
+   
+      
+      
+    <p>
+      <FaBath></FaBath>
+      {
+        data.description.split("-")[1]
+      }</p>
+
+    <p>
+      <MdMeetingRoom></MdMeetingRoom>
+    {
+        data.description.split("-")[2]
+      }
+    </p>
+    <button type="button" className="btn btn-success"  font onClick={() => window.location.href=`/Products/${data.id}`} > Ver </button>   
+   
     </Popup>
+    
+    
 
   </Marker>
   </div>
