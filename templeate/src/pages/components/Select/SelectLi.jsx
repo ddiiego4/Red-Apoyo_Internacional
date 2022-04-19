@@ -13,7 +13,7 @@ export default class SelectLi extends Component {
       .get("https://isnft-prod.azurewebsites.net/api/country")
       .then((resp) => {
         this.setState({ Country: 0 });
-        this.setState({ Cities: Number(resp.data[this.state.Country].cities) });
+        this.setState({ Cities: resp.data[this.state.Country].cities });
       })
       .catch((er) => {
         console.log(er);
@@ -23,7 +23,7 @@ export default class SelectLi extends Component {
   render() {
     return (
       <div>
-        <select name="city" type="submit" className="form-control">
+        <select name="cities" type="submit" className="form-control">
           {this.state.Cities.map((item, index) => (
             <>
               <option key={index} value={item.id}>

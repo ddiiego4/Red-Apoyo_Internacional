@@ -269,7 +269,7 @@ const Profilers = ({ profile_Data, setSState }) => {
                               db.photos.map(
                                 (item, index) => (
                                   <div key={index}>
-                                    <h2> Foto: {item.id}</h2>
+                                    
                                     <img style={{ width: "50%" 
                                   }} alt={item.url} src={item.url} ></img>
                                   </div>

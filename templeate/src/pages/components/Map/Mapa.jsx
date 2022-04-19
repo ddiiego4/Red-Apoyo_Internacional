@@ -7,23 +7,19 @@ import axios from "axios";
 const Mapa = () => {
 
   const [dbcasas, setdbcasas] = useState([])
+  const [location, setLocation] = useState({
+      currentLocation : {"lat": "-33.386740", "lng":"-70.624847"}
+  })
 
+  
   useEffect(()=>{
     axios
     .get("https://isnft-prod.azurewebsites.net/api/houses")
     .then((rep) =>{
-      console.log("casas para los mapas")
-      console.log(rep.data.result)
       setdbcasas(rep.data.result)
-    })
-  })
-
-
-    const [location, setLocation] = useState({
-        currentLocation : {"lat": "-33.386740", "lng":"-70.624847"}
-    })
-
-
+      setLocation({currentLocation: { "lat" : dbcasas[4].latitude , "lng": dbcasas[4].longitude}})
+    })  
+  })  
 
 
   return (
