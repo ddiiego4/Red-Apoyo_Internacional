@@ -24,7 +24,6 @@ const Markers = ({ data }) => {
 
   return (
     <div>
-      <span style={{ display: "none" }} >{housesdb}</span>
 
       <Marker position={position} icon={IconLocation} >
         <Popup>
