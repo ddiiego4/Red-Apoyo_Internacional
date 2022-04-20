@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import Form from '../Form/Form'
+import React, { useState } from 'react'
 import Rent from "../../../assets/img/Public/Rent.png"
 import Loader from '../Loader/Loader'
 import InputN from '../Input/InputN';
@@ -8,27 +7,25 @@ import InputCheck from '../InputCheck/InputCheck';
 import InputImg from '../InputImg/InputImg';
 import Selecct from '../Select/Select';
 import SelectLi from '../Select/SelectLi';
-import Public_house from '../Publicar/Public';
 import Title from '../Title/Title'
 import "./EditHouse.css"
 
 
-function public_house(form, setErr, setForm, setPublicar, Publica, setLoad) {
-   // CreateHouse(form, setErr, setForm, location);
+function public_house(form, setForm, setPublicar, Publica, setLoad) {
+    // CreateHouse(form, setErr, setForm, location);
     //console.log(location)
     setLoad(true);
     setTimeout(() => {
-      setLoad(false);
+        setLoad(false);
     }, 2000);
-  }
+}
 
-const EditHouses = ({data}) => {
+const EditHouses = ({ data }) => {
     const [Load, setLoad] = useState(false);
     const [form, setForm] = useState([]);
-    const [err, setErr] = useState(false);
     const [Publica, setPublicar] = useState(false);
 
- 
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -47,7 +44,7 @@ const EditHouses = ({data}) => {
         <div className='container_form_edit'>
             <div className="container_publicar">
                 <div className="Load_p">
-                   
+
                     {Load && <Loader />}
 
                 </div>
@@ -145,7 +142,7 @@ const EditHouses = ({data}) => {
                                         placeholder: "Habitaciones Disponibles",
                                         onChange: handleChange,
                                     }}
-                                    />
+                                />
                                 <br></br>
                             </div>
                             <div className="In_puts">
@@ -176,7 +173,7 @@ const EditHouses = ({data}) => {
                         <button
                             className="btn btn-primary"
                             onClick={() =>
-                                public_house(form, setErr, setForm, setPublicar, Publica, setLoad)
+                                public_house(form, setForm, setPublicar, Publica, setLoad)
                             }
                         >
                             Edit Publicacion

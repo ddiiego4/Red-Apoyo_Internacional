@@ -113,7 +113,7 @@ const EditPublicar = ({
             </div>
             <div>
               <div className="mb-3">
-                <label className="form-label">
+                <label className="form-label" style={{color:"grey", fontSize:"20px", fontFamily:"inherit"}}>
                   Inserta tus Fotos
                 </label>
                 <div onChange={handleChange}><InputImg /></div>

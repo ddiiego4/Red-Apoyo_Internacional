@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import EditHouses from './EditHouses';
 import Headerns from '../Header/Headerns';
-import BtnEditHouse from './BtnEditHouse';
 import axios from 'axios';
 import Footer from '../Footer/Footer';
 
-const EditHouse = () =>{
-    const [db, setdb ] = useState([]);
-    useEffect(()=>{
+const EditHouse = () => {
+    const [db, setdb] = useState([]);
+    useEffect(() => {
         const id_house = window.location.pathname.split("/")[2];
         const dburl = `https://isnft-prod.azurewebsites.net/api/houses/${id_house}`;
 
@@ -22,11 +21,11 @@ const EditHouse = () =>{
             .catch((err) => console.log(err));
     })
     return (
-           <div className='Sections'>
-               <Headerns></Headerns>
-               <EditHouses data={db}/>   
-               <Footer></Footer>
-            </div> 
+        <div className='Sections'>
+            <Headerns></Headerns>
+            <EditHouses data={db} />
+            <Footer></Footer>
+        </div>
 
     );
 }

@@ -18,6 +18,9 @@ class UsrProfilesPublic extends Component {
     }
 
     componentDidMount() {
+        if (!cookies.get('id_usr_tok')) {
+            window.location.href = "/";
+        }
         axios.get(urldb).then(res => {
             //console.log("VIene la data");
             //console.log(res.data.result);

@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from 'react'
+import React, { Component } from 'react'
 import Cookies from 'universal-cookie'
 import "./UsrProfile.css"
 import UsrProfiles from './UsrProfiles'
@@ -18,14 +18,13 @@ class UsrProfile extends Component {
     }
 
     componentDidMount() {
+        if (!cookies.get('id_usr_tok')) {
+            window.location.href = "/";
+        }
         axios.get(urldb).then(res => {
-          
             this.setState({ dtusr: res.data, load: false });
-            
-            
         });
     }
-
 
     render() {
 
@@ -43,7 +42,7 @@ class UsrProfile extends Component {
                     <div className='Sections'>
                         <div className='container_profile_usr'>
                             {this.state.load && (<><div className="load_all_houses"><Loader /><Message Mensaje={"Buscaremos por ti...."} ></Message></div></>)}
-                            <UsrProfiles  />
+                            <UsrProfiles />
                         </div>
                     </div>
                 </div>

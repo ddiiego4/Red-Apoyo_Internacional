@@ -19,7 +19,7 @@ const Error404head = () => {
 
                         <div>
                             <div class="main">
-                                <div>
+                                <div style={{ marginTop: "80px" }}>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 355">
                                         <g id="ocean">
                                             <path id="sky" class="st0" d="M0 0h1000v203.1H0z" />

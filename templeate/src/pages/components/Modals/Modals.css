@@ -22,3 +22,20 @@
     overflow-y: auto;
     outline: 0;
 }
+
+.modal-content_comment {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 120%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 0.3rem;
+    outline: 0;
+    top: -189px;
+    left: 300px;
+    margin: auto;
+    z-index: 1;
+}

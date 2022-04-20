@@ -8,15 +8,9 @@ import './Layout.css'
 
 const cookies = new Cookies();
 
-/**
- * 
- * const redirect = () => {
- *    window.location.href = './Login';
- *   }
- * */
 
 class Layout extends Component {
-    
+
     cerrarSesion = () => {
         cookies.remove('id_usr_tok', { path: "/" });
         window.location.href = './';
@@ -26,7 +20,7 @@ class Layout extends Component {
         if (!cookies.get('id_usr_tok')) {
             window.location.href = "./";
         }
-        
+
     }
 
     render() {

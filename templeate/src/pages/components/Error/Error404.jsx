@@ -1,6 +1,4 @@
 import React from 'react'
-import Headerns from "../Header/Headerns"
-import Footer from '../Footer/Footer'
 import "./Message.css"
 
 const Error404 = () => {
@@ -8,7 +6,7 @@ const Error404 = () => {
         <div>
 
             <div className='container_menu'>
-                
+
                 <br />
                 <br />
                 <div>
@@ -311,7 +309,7 @@ const Error404 = () => {
                 </div>
                 <div>
                 </div>
-              
+
             </div>
 
         </div>

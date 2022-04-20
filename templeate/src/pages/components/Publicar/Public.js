@@ -9,6 +9,7 @@ const Public = ({ setPublicar, Publica, Location_user}) => {
   // const [editForm, setEditForm] = useState(null);
   const [Err, setErr] = useState(null);
   const [Loading, setLoading] = useState(false);
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();

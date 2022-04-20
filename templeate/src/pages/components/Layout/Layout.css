@@ -5,7 +5,7 @@
 }
 
 div.logo_navbar {
-   
+
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url(https://cdn-icons-png.flaticon.com/512/6908/6908753.png);
@@ -25,7 +25,7 @@ div.logo_navbar {
     margin-left: 29px;
     height: 32px;
     width: 30px;
-    
+
 }
 
 
@@ -38,14 +38,34 @@ div.logo_navbar {
 
 .container_carousel_principal {
     background-color: none;
+    margin-bottom: 9%;
 }
 
 /**
 * This is media Query to charge css layout design responsive
 */
-@media (max-width:1050px){
+
+
+@media (max-width:1050px) {
+    .modal-content_comment {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 120%;
+        pointer-events: auto;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, .2);
+        border-radius: 0.3rem;
+        outline: 0;
+        top: -189px;
+        left: 150px;
+        margin: auto;
+        z-index: 1;
+    }
+
     div.logo_navbar {
-   
+
         background-size: contain;
         background-repeat: no-repeat;
         background-image: url(https://cdn-icons-png.flaticon.com/512/6908/6908753.png);
@@ -55,131 +75,16 @@ div.logo_navbar {
         border-style: outset;
         margin-left: 48px;
         border: none;
-    
-    }
-   
- 
-     .form_dist{
-         display: inline-flex;
-         width: auto;
-         font-size: 15px;
-     }
-     .container_publicar {
-         margin: auto;
-         margin-top: 60px;
-         background: #d7d7d740;
-         border-radius: 21px;
-         box-shadow: 0px 0px 27px -11px;
-         margin-bottom: 10px;
-     }
-     .rent img {
-         border: none;
-         opacity: 0.5;
-         width: 200px;
-     }
-}
 
-
-
-@media (max-width:1000px){
-    div.logo_navbar {
-   
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-image: url(https://cdn-icons-png.flaticon.com/512/6908/6908753.png);
-        width: 52px;
-        height: 52px;
-        border-radius: 124px;
-        border-style: outset;
-        margin-left: 48px;
-        border: none;
-    
-    }
-   
- 
-     .form_dist{
-         display: inline-flex;
-         width: auto;
-         font-size: 15px;
-     }
-     .container_publicar {
-         margin: auto;
-         margin-top: 60px;
-         background: #d7d7d740;
-         border-radius: 21px;
-         box-shadow: 0px 0px 27px -11px;
-         margin-bottom: 10px;
-     }
-     .rent2 img {
-         display:inline;
-         border: none;
-         opacity: 0.5;
-         width: 200px;
-     }
-}
-
-
-@media (max-width:950px){
-    div.logo_navbar {
-   
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-image: url(https://cdn-icons-png.flaticon.com/512/6908/6908753.png);
-        width: 52px;
-        height: 52px;
-        border-radius: 124px;
-        border-style: outset;
-        margin-left: 48px;
-        border: none;
-    
-    }
-   
- 
-     .form_dist{
-         display: inline-flex;
-         width: auto;
-         font-size: 15px;
-     }
-     .container_publicar {
-         margin: auto;
-         margin-top: 60px;
-         background: #d7d7d740;
-         border-radius: 21px;
-         box-shadow: 0px 0px 27px -11px;
-         margin-bottom: 10px;
-     }
-     .rent img {
-         display: none;
-     }
-     .rent2 img {
-        display:inline;
-        border: none;
-        opacity: 0.5;
-        width: 200px;
-    }
-}
-
-
-@media (max-width:900px){
-    div.logo_navbar {
-   
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-image: url(https://cdn-icons-png.flaticon.com/512/6908/6908753.png);
-        width: 52px;
-        height: 52px;
-        border-radius: 124px;
-        border-style: outset;
-        margin-left: 48px;
-        border: none;
-    
     }
 
-    .form_dist{
+
+    .form_dist {
         display: inline-flex;
         width: auto;
         font-size: 15px;
     }
+
     .container_publicar {
         margin: auto;
         margin-top: 60px;
@@ -188,6 +93,123 @@ div.logo_navbar {
         box-shadow: 0px 0px 27px -11px;
         margin-bottom: 10px;
     }
+
+}
+
+
+
+@media (max-width:1000px) {
+    .modal-content_comment {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 120%;
+        pointer-events: auto;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, .2);
+        border-radius: 0.3rem;
+        outline: 0;
+        top: -189px;
+        left: 150px;
+        margin: auto;
+        z-index: 1;
+    }
+
+    div.logo_navbar {
+
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url(https://cdn-icons-png.flaticon.com/512/6908/6908753.png);
+        width: 52px;
+        height: 52px;
+        border-radius: 124px;
+        border-style: outset;
+        margin-left: 48px;
+        border: none;
+
+    }
+
+
+    .form_dist {
+        display: inline-flex;
+        width: auto;
+        font-size: 15px;
+    }
+
+    .container_publicar {
+        margin: auto;
+        margin-top: 60px;
+        background: #d7d7d740;
+        border-radius: 21px;
+        box-shadow: 0px 0px 27px -11px;
+        margin-bottom: 10px;
+    }
+
+    .rent img {
+        border: none;
+        opacity: 0.5;
+        width: 50%;
+        margin: auto;
+    }
+}
+
+
+@media (max-width:950px) {
+    .modal-content_comment {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 120%;
+        pointer-events: auto;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, .2);
+        border-radius: 0.3rem;
+        outline: 0;
+        top: -189px;
+        left: 150px;
+        margin: auto;
+        z-index: 1;
+    }
+
+    div.logo_navbar {
+
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url(https://cdn-icons-png.flaticon.com/512/6908/6908753.png);
+        width: 52px;
+        height: 52px;
+        border-radius: 124px;
+        border-style: outset;
+        margin-left: 48px;
+        border: none;
+
+    }
+
+
+    .form_dist {
+        display: inline-flex;
+        width: auto;
+        font-size: 15px;
+    }
+
+    .container_publicar {
+        margin: auto;
+        margin-top: 60px;
+        background: #d7d7d740;
+        border-radius: 21px;
+        box-shadow: 0px 0px 27px -11px;
+        margin-bottom: 10px;
+    }
+
+    .rent img {
+        border: none;
+        opacity: 0.5;
+        width: 50%;
+        margin: auto;
+    }
+
     .rent2 img {
         display: inline;
         border: none;
@@ -196,9 +218,28 @@ div.logo_navbar {
     }
 }
 
-@media (max-width:850px){
+
+@media (max-width:900px) {
+    .modal-content_comment {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 120%;
+        pointer-events: auto;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, .2);
+        border-radius: 0.3rem;
+        outline: 0;
+        top: -189px;
+        left: 150px;
+        margin: auto;
+        z-index: 1;
+    }
+
     div.logo_navbar {
-   
+
+
         background-size: contain;
         background-repeat: no-repeat;
         background-image: url(https://cdn-icons-png.flaticon.com/512/6908/6908753.png);
@@ -208,16 +249,15 @@ div.logo_navbar {
         border-style: outset;
         margin-left: 48px;
         border: none;
-    
+
     }
-    
 
-    .form_dist{
+    .form_dist {
         display: inline-flex;
-
         width: auto;
         font-size: 15px;
     }
+
     .container_publicar {
         margin: auto;
         margin-top: 60px;
@@ -226,6 +266,68 @@ div.logo_navbar {
         box-shadow: 0px 0px 27px -11px;
         margin-bottom: 10px;
     }
+
+    .rent2 img {
+        display: inline;
+        border: none;
+        opacity: 0.5;
+        width: 200px;
+    }
+
+    .rent img {
+        width: 50%;
+    }
+}
+
+@media (max-width:850px) {
+    .modal-content_comment {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 120%;
+        pointer-events: auto;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, .2);
+        border-radius: 0.3rem;
+        outline: 0;
+        top: -189px;
+        left: 150px;
+        margin: auto;
+        z-index: 1;
+    }
+
+    div.logo_navbar {
+
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url(https://cdn-icons-png.flaticon.com/512/6908/6908753.png);
+        width: 52px;
+        height: 52px;
+        border-radius: 124px;
+        border-style: outset;
+        margin-left: 48px;
+        border: none;
+
+    }
+
+
+    .form_dist {
+        display: inline-flex;
+
+        width: auto;
+        font-size: 15px;
+    }
+
+    .container_publicar {
+        margin: auto;
+        margin-top: 60px;
+        background: #d7d7d740;
+        border-radius: 21px;
+        box-shadow: 0px 0px 27px -11px;
+        margin-bottom: 10px;
+    }
+
     .rent2 img {
         display: initial;
         border: none;
@@ -233,14 +335,36 @@ div.logo_navbar {
         width: 200px;
     }
 
-    
+
 }
 
 
-@media (max-width:800px){
-  
+@media (max-width:800px) {
+    .modal-content_comment {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 120%;
+        pointer-events: auto;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, .2);
+        border-radius: 0.3rem;
+        outline: 0;
+        top: -189px;
+        left: 150px;
+        margin: auto;
+        z-index: 1;
+    }
+
+    .container_carousel {
+        width: 100%;
+        margin: auto;
+        margin-top: 33px;
+    }
+
     div.logo_navbar {
-   
+
         background-size: contain;
         background-repeat: no-repeat;
         background-image: url(https://cdn-icons-png.flaticon.com/512/6908/6908753.png);
@@ -250,14 +374,15 @@ div.logo_navbar {
         border-style: outset;
         margin-left: 48px;
         border: none;
-    
+
     }
 
-    .form_dist{
+    .form_dist {
         display: inline-flex;
         width: auto;
         font-size: 15px;
     }
+
     .container_publicar {
         margin: auto;
         margin-top: 60px;
@@ -265,17 +390,20 @@ div.logo_navbar {
         border-radius: 21px;
         box-shadow: 0px 0px 27px -11px;
         margin-bottom: 10px;
-       
+
     }
+
     .rent img {
-        display: none;
+        width: 50%;
     }
+
     .rent2 img {
         display: initial;
         border: none;
         opacity: 0.5;
         width: 200px;
     }
+
     .container_carousel {
         width: 45%;
         margin: auto;
@@ -284,6 +412,28 @@ div.logo_navbar {
 }
 
 @media (max-width: 780px) {
+    .modal-content_comment {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 120%;
+        pointer-events: auto;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, .2);
+        border-radius: 0.3rem;
+        outline: 0;
+        top: -189px;
+        left: -63px;
+        margin: auto;
+        z-index: 1;
+    }
+
+    .container_carousel {
+        width: 100%;
+        margin: auto;
+        margin-top: 33px;
+    }
 
     .perfil-house .datos-perfil {
         position: absolute;
@@ -293,6 +443,7 @@ div.logo_navbar {
         text-align: center;
         top: 105%;
     }
+
     .perfil-house .contenedor-perfil {
         width: 100%;
     }
@@ -311,6 +462,7 @@ div.logo_navbar {
     .perfil-house .titulo-usuario {
         font-size: 2.1rem;
     }
+
     .perfil-house .portada-perfil-house {
         display: block;
         background-size: cover;
@@ -352,17 +504,44 @@ div.logo_navbar {
     .perfil-house .icono-perfil {
         display: inline-block;
     }
+
+    .rent img {
+        width: 45%;
+    }
 }
 
 
 
-@media (max-width:750px){
-  
+@media (max-width:750px) {
+    .modal-content_comment {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 120%;
+        pointer-events: auto;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, .2);
+        border-radius: 0.3rem;
+        outline: 0;
+        top: -189px;
+        left: -63px;
+        margin: auto;
+        z-index: 1;
+    }
+
+    .container_carousel {
+        width: 100%;
+        margin: auto;
+        margin-top: 33px;
+    }
+
     .control_btn_search {
         font-size: 10px;
     }
+
     div.logo_navbar {
-   
+
         background-size: contain;
         background-repeat: no-repeat;
         background-image: url(https://cdn-icons-png.flaticon.com/512/6908/6908753.png);
@@ -372,15 +551,16 @@ div.logo_navbar {
         border-style: outset;
         margin-left: 48px;
         border: none;
-    
+
     }
 
-    .form_dist{
+    .form_dist {
         display: inline-flex;
 
         width: auto;
         font-size: 15px;
     }
+
     .container_publicar {
         margin: auto;
         margin-top: 60px;
@@ -390,9 +570,11 @@ div.logo_navbar {
         margin-bottom: 10px;
         width: 114%;
     }
+
     .rent img {
-        display: none;
+        width: 45%;
     }
+
     .rent2 img {
         display: initial;
         border: none;
@@ -403,14 +585,39 @@ div.logo_navbar {
 
 
 
-@media (max-width:700px){
-    .btn-group>.btn-group:not(:last-child)>.btn, .btn-group>.btn:not(:last-child):not(.dropdown-toggle) {
+@media (max-width:700px) {
+    .modal-content_comment {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 120%;
+        pointer-events: auto;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, .2);
+        border-radius: 0.3rem;
+        outline: 0;
+        top: -189px;
+        left: -63px;
+        margin: auto;
+        z-index: 1;
+    }
+
+    .container_carousel {
+        width: 100%;
+        margin: auto;
+        margin-top: 33px;
+    }
+
+    .btn-group>.btn-group:not(:last-child)>.btn,
+    .btn-group>.btn:not(:last-child):not(.dropdown-toggle) {
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
         font-size: 14px;
     }
+
     div.logo_navbar {
-   
+
         background-size: contain;
         background-repeat: no-repeat;
         background-image: url(https://cdn-icons-png.flaticon.com/512/6908/6908753.png);
@@ -420,15 +627,16 @@ div.logo_navbar {
         border-style: outset;
         margin-left: 48px;
         border: none;
-    
+
     }
 
-    .form_dist{
+    .form_dist {
         display: inline-flex;
 
         width: auto;
         font-size: 15px;
     }
+
     .container_publicar {
         margin: auto;
         margin-top: 60px;
@@ -438,11 +646,13 @@ div.logo_navbar {
         margin-bottom: 10px;
         width: auto;
     }
+
     .rent img {
         border: none;
         opacity: 0.5;
         width: 200px;
     }
+
     .rent2 img {
         display: initial;
         border: none;
@@ -451,14 +661,41 @@ div.logo_navbar {
     }
 }
 
-@media (max-width:650px){
-    .btn-group>.btn-group:not(:last-child)>.btn, .btn-group>.btn:not(:last-child):not(.dropdown-toggle) {
+@media (max-width:650px) {
+
+
+    .modal-content_comment {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 120%;
+        pointer-events: auto;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, .2);
+        border-radius: 0.3rem;
+        outline: 0;
+        top: -169px;
+        left: -63px;
+        margin: auto;
+        z-index: 1;
+    }
+
+    .btn-group>.btn-group:not(:last-child)>.btn,
+    .btn-group>.btn:not(:last-child):not(.dropdown-toggle) {
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
         font-size: 14px;
     }
+
+    .container_carousel {
+        width: 100%;
+        margin: auto;
+        margin-top: 33px;
+    }
+
     div.logo_navbar {
-   
+
         background-size: contain;
         background-repeat: no-repeat;
         background-image: url(https://cdn-icons-png.flaticon.com/512/6908/6908753.png);
@@ -468,15 +705,16 @@ div.logo_navbar {
         border-style: outset;
         margin-left: 48px;
         border: none !important;
-    
+
     }
 
-    .form_dist{
+    .form_dist {
         display: inline-flex;
 
         width: auto;
         font-size: 15px;
     }
+
     .container_publicar {
         margin: auto;
         margin-top: 60px;
@@ -486,11 +724,13 @@ div.logo_navbar {
         margin-bottom: 10px;
         width: auto;
     }
+
     .rent img {
         border: none;
         opacity: 0.5;
         width: 200px;
     }
+
     .rent2 img {
         display: initial;
         border: none;
@@ -499,14 +739,51 @@ div.logo_navbar {
     }
 }
 
-@media (max-width:600px){
-    .btn-group>.btn-group:not(:last-child)>.btn, .btn-group>.btn:not(:last-child):not(.dropdown-toggle) {
+@media (max-width:600px) {
+    .titl {
+        font-size: 45px;
+        color: #ffffffcc;
+    }
+
+    .parrafos {
+        margin-top: 0;
+        margin-bottom: 2px;
+        color: #fff9f2;
+        font-size: 14px;
+    }
+
+    .modal-content_comment {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 120%;
+        pointer-events: auto;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, .2);
+        border-radius: 0.3rem;
+        outline: 0;
+        top: -69px;
+        left: -63px;
+        margin: auto;
+        z-index: 1;
+    }
+
+    .btn-group>.btn-group:not(:last-child)>.btn,
+    .btn-group>.btn:not(:last-child):not(.dropdown-toggle) {
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
         font-size: 14px;
     }
+
+    .container_carousel {
+        width: 100%;
+        margin: auto;
+        margin-top: 33px;
+    }
+
     div.logo_navbar {
-   
+
         background-size: contain;
         background-repeat: no-repeat;
         background-image: url(https://cdn-icons-png.flaticon.com/512/6908/6908753.png);
@@ -516,15 +793,16 @@ div.logo_navbar {
         border-style: outset;
         margin-left: 48px;
         border: none;
-    
+
     }
 
-    .form_dist{
+    .form_dist {
         display: inline-block;
 
         width: auto;
         font-size: 15px;
     }
+
     .container_publicar {
         margin: auto;
         margin-top: 60px;
@@ -534,20 +812,24 @@ div.logo_navbar {
         margin-bottom: 10px;
         width: auto;
     }
+
     .rent img {
         border: none;
         opacity: 0.5;
         width: 200px;
     }
+
     .rent2 img {
         display: initial;
         border: none;
         opacity: 0.5;
         width: 200px;
     }
+
     .Sections {
         width: 100%;
     }
+
     .container_comentario {
         background-color: #7d7d7e9c;
         width: 100%;
@@ -564,14 +846,65 @@ div.logo_navbar {
 
 }
 
-@media (max-width:550px){
+@media (max-width:550px) {
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0, 0, 0, .125);
+        width: 235px;
+        border-radius: 0.25rem;
+        margin-top: 46px;
+        margin: auto;
+        margin-bottom: 16px;
+    }
+
+    .titl {
+        font-size: 45px;
+        color: #ffffffcc;
+    }
+
+    .parrafos {
+        margin-top: 0;
+        margin-bottom: 2px;
+        color: #fff9f2;
+        font-size: 14px;
+    }
+
+    .modal-content_comment {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 120%;
+        pointer-events: auto;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, .2);
+        border-radius: 0.3rem;
+        outline: 0;
+        top: -69px;
+        left: -63px;
+        margin: auto;
+        z-index: 1;
+    }
+
     .control_btn_search {
         margin-left: 61px;
         display: none;
     }
-  
+
+    .container_carousel {
+        width: 100%;
+        margin: auto;
+        margin-top: 33px;
+    }
+
     div.logo_navbar {
-   
+
         background-size: contain;
         background-repeat: no-repeat;
         background-image: url(https://cdn-icons-png.flaticon.com/512/6908/6908753.png);
@@ -581,7 +914,7 @@ div.logo_navbar {
         border-style: outset;
         margin-left: 48px;
         border: none;
-    
+
     }
 
     .form_dist {
@@ -589,6 +922,7 @@ div.logo_navbar {
         width: auto;
         font-size: 15px;
     }
+
     .container_publicar {
         margin: auto;
         margin-top: 60px;
@@ -598,30 +932,84 @@ div.logo_navbar {
         margin-bottom: 10px;
         width: auto;
     }
+
     .rent img {
         border: none;
         opacity: 0.5;
         width: 200px;
     }
+
     .rent2 img {
         display: initial !important;
         border: none;
         opacity: 0.5;
         width: 200px;
     }
+
     .Sections {
         width: 100%;
     }
 }
 
-@media (max-width:500px){
+@media (max-width:500px) {
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0, 0, 0, .125);
+        width: 235px;
+        border-radius: 0.25rem;
+        margin-top: 46px;
+        margin: auto;
+        margin-bottom: 16px;
+    }
+
+    .titl {
+        font-size: 45px;
+        color: #ffffffcc;
+    }
+
+    .parrafos {
+        margin-top: 0;
+        margin-bottom: 2px;
+        color: #fff9f2;
+        font-size: 14px;
+    }
+
+    .modal-content_comment {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 120%;
+        pointer-events: auto;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, .2);
+        border-radius: 0.3rem;
+        outline: 0;
+        top: -69px;
+        left: -63px;
+        margin: auto;
+        z-index: 1;
+    }
+
     .control_btn_search {
         margin-left: 61px;
         display: none;
     }
-  
+
+    .container_carousel {
+        width: 100%;
+        margin: auto;
+        margin-top: 33px;
+    }
+
     div.logo_navbar {
-   
+
         background-size: contain;
         background-repeat: no-repeat;
         background-image: url(https://cdn-icons-png.flaticon.com/512/6908/6908753.png);
@@ -631,7 +1019,7 @@ div.logo_navbar {
         border-style: outset;
         margin-left: 48px;
         border: none;
-    
+
     }
 
     .form_dist {
@@ -639,6 +1027,7 @@ div.logo_navbar {
         width: auto;
         font-size: 15px;
     }
+
     .container_publicar {
         margin: auto;
         margin-top: 60px;
@@ -648,52 +1037,171 @@ div.logo_navbar {
         margin-bottom: 10px;
         width: auto;
     }
+
     .rent img {
         border: none;
         opacity: 0.5;
         width: 200px;
     }
+
     .Sections {
         width: 100%;
     }
+
     .container_carousel {
         width: 100%;
         margin: auto;
-            margin-top: auto;
+        margin-top: auto;
         margin-top: 33px;
+    }
+
+    .dropdown {
+        position: absolute;
+        right: -113px;
+        top: 0px;
     }
 }
 
 @media (max-width:450) {
-    
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0, 0, 0, .125);
+        width: 235px;
+        border-radius: 0.25rem;
+        margin-top: 46px;
+        margin: auto;
+        margin-bottom: 16px;
+    }
+
+    .titl {
+        font-size: 45px;
+        color: #ffffffcc;
+    }
+
+    .parrafos {
+        margin-top: 0;
+        margin-bottom: 2px;
+        color: #fff9f2;
+        font-size: 14px;
+    }
+
+    .modal-content_comment {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        width: 120%;
+        pointer-events: auto;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, .2);
+        border-radius: 0.3rem;
+        outline: 0;
+        top: 50px;
+        left: -63px;
+        margin: auto;
+    }
+
+    .container_carousel {
+        width: 100%;
+        margin: auto;
+        margin-top: 33px;
+    }
+
     .control_btn_search {
         margin-left: 61px;
         display: none;
     }
-    .form_dist{
+
+    .form_dist {
         width: auto;
         font-size: 15px;
-    }    
+    }
+
     .Sections {
         width: 100%;
     }
+
     .container_carousel {
         width: 100%;
         margin: auto;
-            margin-top: auto;
+        margin-top: auto;
         margin-top: 33px;
+    }
+
+    .dropdown {
+        position: absolute;
+        right: -113px;
+        top: 0px;
     }
 }
 
 
 @media (max-width:400) {
-    .form_dist{
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0, 0, 0, .125);
+        width: 235px;
+        border-radius: 0.25rem;
+        margin-top: 46px;
+        margin: auto;
+        margin-bottom: 16px;
+    }
+
+    .titl {
+        font-size: 45px;
+        color: #ffffffcc;
+    }
+
+    .parrafos {
+        margin-top: 0;
+        margin-bottom: 2px;
+        color: #fff9f2;
+        font-size: 14px;
+    }
+
+    .modal-content_comment {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        width: 120%;
+        pointer-events: auto;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, .2);
+        border-radius: 0.3rem;
+        outline: 0;
+        top: 50px;
+        left: -63px;
+        margin: auto;
+    }
+
+    .container_carousel {
+        width: 100%;
+        margin: auto;
+        margin-top: 33px;
+    }
+
+    .form_dist {
         width: auto;
         font-size: 15px;
-    }    
+    }
+
     .Sections {
         width: 100%;
     }
+
     .container_menu {
         align-content: center;
         text-align-last: center;
@@ -701,40 +1209,132 @@ div.logo_navbar {
         width: 100%;
         margin: auto;
     }
+
     .container_carousel_principal {
         background-color: none;
         width: 42%;
     }
+
     .container_carousel {
         width: 100%;
         margin: auto;
-            margin-top: auto;
+        margin-top: auto;
         margin-top: 33px;
+    }
+
+    .dropdown {
+        position: absolute;
+        right: -122px;
     }
 }
 
 
-@media (max-width:350px){
-    .form_dist{
-        
+@media (max-width:350px) {
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0, 0, 0, .125);
+        width: 235px;
+        border-radius: 0.25rem;
+        margin-top: 46px;
+        margin: auto;
+        margin-bottom: 16px;
+    }
+
+    .titl {
+        font-size: 40px;
+        color: #ffffffcc;
+    }
+
+    .parrafos {
+        margin-top: 0;
+        margin-bottom: 2px;
+        color: #fff9f2;
+        font-size: 12px;
+    }
+
+    .modal-content_comment {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        width: 120%;
+        pointer-events: auto;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, .2);
+        border-radius: 0.3rem;
+        outline: 0;
+        top: 50px;
+        left: -63px;
+        margin: auto;
+    }
+
+    .container_carousel {
+        width: 100%;
+        margin: auto;
+        margin-top: 33px;
+    }
+
+    .form_dist {
+
         width: auto;
         font-size: 15px;
     }
+
     .Sections {
         width: 100%;
     }
+
+    .dropdown {
+        position: absolute;
+        right: -122px;
+    }
 }
 
-@media (max-width:300px){
-    .form_dist{
+@media (max-width:300px) {
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0, 0, 0, .125);
+        width: 235px;
+        border-radius: 0.25rem;
+        margin-top: 46px;
+        margin: auto;
+        margin-bottom: 16px;
+    }
+
+    .titl {
+        font-size: 35px;
+        color: #ffffffcc;
+    }
+
+    .parrafos {
+        margin-top: 0;
+        margin-bottom: 2px;
+        color: #fff9f2;
+        font-size: 10px;
+    }
+
+    .form_dist {
         display: inline-block;
         width: auto;
         font-size: 15px;
     }
 
     div.logo_navbar {
-       display: none !important;
+        display: none !important;
     }
+
     .container_publicar {
         margin: auto;
         margin-top: 60px;
@@ -744,22 +1344,51 @@ div.logo_navbar {
         margin-bottom: 10px;
         width: auto;
     }
+
     .rent img {
-        border: none;
-        opacity: 0.5;
-        width: auto;
+        width: 100%;
     }
+
     .container_carousel {
-        width: 45%;
+        width: 100%;
         margin: auto;
         margin-top: 33px;
     }
-    .Sections{
+
+    .Sections {
         width: 100%;
+    }
+
+    .dropdown {
+        position: absolute;
+        right: -122px;
     }
 }
 
-@media (max-width: 250px){
+@media (max-width: 250px) {
+    .titl {
+        font-size: 35px;
+        color: #ffffffcc;
+    }
+
+    .parrafos {
+        margin-top: 0;
+        margin-bottom: 2px;
+        color: #fff9f2;
+        font-size: 10px;
+    }
+
+    .container_carousel {
+        width: 100%;
+        margin: auto;
+        margin-top: 33px;
+    }
+
+    .dropdown {
+        position: absolute;
+        right: -122px;
+    }
+
     .header_col {
         display: flex;
         height: 51px;
@@ -771,10 +1400,11 @@ div.logo_navbar {
         border-end-end-radius: 150px;
         border-end-start-radius: 150px;
     }
-      
+
     div.logo_navbar {
         display: none !important;
     }
+
     .container_publicar {
         margin: auto;
         margin-top: 60px;
@@ -784,30 +1414,41 @@ div.logo_navbar {
         margin-bottom: 10px;
         width: auto;
     }
+
     .rent img {
-        border: none;
-        opacity: 0.5;
-        width: 149px;
-    }
-    .container_carousel {
-        width: 45%;
-        margin: auto;
-        margin-top: 33px;
-    }
-    .Sections{
         width: 100%;
     }
-    
-    
-    
+
+    .Sections {
+        width: 100%;
+    }
+
+    .form-switch {
+        display: none;
+    }
+
+
+
+
 }
 
 @media (maxx-widt:160px) {
     body {
-        background-image: url('https://cdn-icons-png.flaticon.com/512/6908/6908753.png');;
+        background-image: url('https://cdn-icons-png.flaticon.com/512/6908/6908753.png');
+        ;
     }
-   
+
     div.logo_navbar {
         display: none !important;
+    }
+
+    .container_carousel {
+        width: 100%;
+        margin: auto;
+        margin-top: 33px;
+    }
+
+    .form-switch {
+        display: none;
     }
 }

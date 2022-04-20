@@ -1,11 +1,11 @@
 import React from "react";
 import './Input.css'
 
-const Input = ({atributo, Error_H, parametro , icon}) => {
+const Input = ({ atributo, Error_H, parametro, icon }) => {
     return (
         <div className="input-group mb-3">
-                    
-            <input 
+
+            <input
                 id={atributo.id}
                 name={atributo.name}
                 placeholder={atributo.placeholder}
@@ -15,8 +15,8 @@ const Input = ({atributo, Error_H, parametro , icon}) => {
                 aria-describedby="basic-addon1"
                 onChange={atributo.onChange}
                 autoComplete="off"
-                value={atributo.value}                
-             />
+                value={atributo.value}
+            />
         </div>
     )
 };

@@ -9,7 +9,7 @@
 }
 
 .w-100 {
-    width: 80%!important;
+    width: 80% !important;
     height: 425px;
     margin: auto;
     margin-top: 27px;
@@ -21,7 +21,7 @@
 
 .carousel-control-next {
     height: 147px;
-    
+
     right: 339px;
     width: 30px;
     top: -2px;
@@ -49,6 +49,7 @@
     box-shadow: 0px 0px 222px -39px;
     opacity: 0.7;
 }
+
 .carddd {
     margin: auto;
     position: relative;
@@ -57,7 +58,7 @@
     word-wrap: break-word;
     background-color: #fff;
     background-clip: border-box;
-    border: 1px solid rgba(0,0,0,.125);
+    border: 1px solid rgba(0, 0, 0, .125);
     width: 284px;
     border-radius: 0.25rem;
 }
@@ -74,7 +75,7 @@
     font-family: -webkit-body;
 }
 
-.imgcontrol{
+.imgcontrol {
     height: auto;
     margin: auto;
     width: 70%;
@@ -82,16 +83,16 @@
     box-shadow: 0px 0px 137px 1px;
 }
 
-.titl{
-    font-size: 100px;
+.titl {
+    font-size: 45px;
     color: #ffffffcc;
 }
 
 .parrafos {
     margin-top: 0;
     margin-bottom: 2px;
-    color: antiquewhite;
-    font-size: 26px;
+    color: #fff9f2;
+    font-size: 13px;
 }
 
 .carousel-inner {

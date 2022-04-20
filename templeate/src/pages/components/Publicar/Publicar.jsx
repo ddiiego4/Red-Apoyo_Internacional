@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Selecct from "../Select/Select";
 import SelectLi from "../Select/SelectLi";
 import Input from "../Input/Input";
 import InputN from "../Input/InputN";
-import InputImg from "../InputImg/InputImg";
 
 import Title from "../Title/Title";
 import "./Publicar.css";
@@ -11,8 +10,8 @@ import "./Publicar.css";
 import Rent from "../../../assets/img/Public/Rent.png";
 
 import CreateHouse from "../../helpers/helpCreateHouse";
-import InputCheck from "../InputCheck/InputCheck";
 import Loader from "../Loader/Loader";
+import Cookies from "universal-cookie";
 
 const Publicar = ({
   handleSubmit,
@@ -27,7 +26,7 @@ const Publicar = ({
   location,
 }) => {
   const [Load, setLoad] = useState(false);
-
+  const cookies = new Cookies()
   function public_house(form, setErr, setForm, setPublicar, Publica, location) {
     //console.log(location)
     setLoad(true);
@@ -37,6 +36,12 @@ const Publicar = ({
     }, 2000);
   }
 
+  useEffect(()=>{
+    if (!cookies.get('id_usr_tok')) {
+      window.location.href = "/";
+  }
+  })
+
   return (
     <div className="container_publicar">
       <div className="Load_p">{Load && <Loader />}</div>
@@ -45,11 +50,11 @@ const Publicar = ({
         <div className="rent2">
             <img src={Rent} alt="Rentar_Hogar"></img>
           </div>
-
-        <form onSubmit={handleSubmit} className="form_dist">
           <div className="rent">
             <img src={Rent} alt="Rentar_Hogar"></img>
           </div>
+        <form onSubmit={handleSubmit} className="form_dist">
+         
           <div>
             <div className="In_puts">
               <Input
@@ -62,20 +67,6 @@ const Publicar = ({
                 }}
               />
               <br></br>
-            </div>
-            <div className="In_puts" onChange={handleChange}>
-              <Input
-                atributo={{
-                  id: "precio",
-                  name: "price",
-                  type: "text",
-                  placeholder: "Costo por noche",
-                  onChange: handleChange,
-                }}
-              />
-
-              <br />
-              <br />
             </div>
             <div className="locationss">
               <div className="In_puts" onChange={handleChange}>
@@ -101,15 +92,7 @@ const Publicar = ({
               </div>
             </div>
 
-            <div className="In_puts" onChange={handleChange}>
-              <InputCheck
-                form={form}
-                handleChange={handleChange}
-                setForm={setForm}
-              />
-              <br />
-              <br />
-            </div>
+           
           </div>
 
           <div>
@@ -149,16 +132,7 @@ const Publicar = ({
               />
               <br></br>
             </div>
-            <div>
-              <div className="mb-3">
-                <label className="form-label">
-                  Inserta tus Fotos
-                </label>
-                <div onChange={handleChange}><InputImg /></div>
-              </div>
-
-              <br></br>
-            </div>
+            
           </div>
         </form>
         <div className="buttons">

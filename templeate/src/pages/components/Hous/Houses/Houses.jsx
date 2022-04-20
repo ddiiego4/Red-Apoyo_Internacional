@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
-import { MdLocationCity, MdLocationPin,MdMeetingRoom} from "react-icons/md"
-import {GiBathtub} from "react-icons/gi"
+import { MdLocationCity, MdLocationPin, MdMeetingRoom } from "react-icons/md"
+import { GiBathtub } from "react-icons/gi"
 
 import "./Houses.css";
 
@@ -12,15 +12,11 @@ const new_pr = (renta) => {
 
 
 const Houses = ({ houses = [] }) => {
-  //const [img, setimg] = useState(false);
 
-  const [load, setload] = useState(true)
   const [db, setdb] = useState([])
 
   useEffect(() => {
- 
     setdb(houses.result);
-    setload(false);
   })
 
   return (
@@ -40,25 +36,25 @@ const Houses = ({ houses = [] }) => {
 
                   {
                     item.photos.length === 0 ? <> <img className="card-img"
-                    alt="card_image"
-                    src="https://a0.muscache.com/im/pictures/4b75813b-bc09-4719-b6b8-06a5f170724d.jpg?im_w=960" />
-                  <span className="spann">
-                    <img
-                      alt="card_image2"
-                      className="card-img"
+                      alt="card_image"
                       src="https://a0.muscache.com/im/pictures/4b75813b-bc09-4719-b6b8-06a5f170724d.jpg?im_w=960" />
-                  </span> </>: <>  <img
-                    className="card-img"
-                    alt="card_image"
-                    src={item.photos[0].url} />
-                  <span className="spann">
-                    <img
-                      alt="card_image2"
-                      className="card-img"
-                      src={item.photos[0].url} />
-                  </span> </>
+                      <span className="spann">
+                        <img
+                          alt="card_image2"
+                          className="card-img"
+                          src="https://a0.muscache.com/im/pictures/4b75813b-bc09-4719-b6b8-06a5f170724d.jpg?im_w=960" />
+                      </span> </> : <>  <img
+                        className="card-img"
+                        alt="card_image"
+                        src={item.photos[0].url} />
+                      <span className="spann">
+                        <img
+                          alt="card_image2"
+                          className="card-img"
+                          src={item.photos[0].url} />
+                      </span> </>
                   }
-                 
+
                   <ul>
                     <li>
                       <div className="center_description">
@@ -85,9 +81,9 @@ const Houses = ({ houses = [] }) => {
                   </ul>
 
                   <p></p>
-                 
+
                 </div>
-              
+
               </div>
             ))}
           </div>

@@ -1,12 +1,10 @@
 import axios from 'axios';
-import React from 'react'
-
 import Cookies from 'universal-cookie';
 
 /**
  * This function send new comment what user host or traveller the cookies verfic the values
  */
-function NewComment(id_lease, status) {
+function NewComment(id_lease, comment, score) {
     const cookie = new Cookies()
     const DbUrl = `https://isnft-prod.azurewebsites.net/api/leases/score/${id_lease}`;
 
@@ -20,14 +18,15 @@ function NewComment(id_lease, status) {
 
     axios
         .put(DbUrl, {
-            "comment": "Very good attention",
-            "score": 500
+            "comment": comment,
+            "score": score
         }, {
             headers: heade
         }
         )
         .then((response) => {
             console.log(response)
+            window.location.reload()
             return 0;
         })
         .catch((err) => {

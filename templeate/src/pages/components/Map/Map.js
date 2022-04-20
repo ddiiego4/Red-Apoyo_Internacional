@@ -3,6 +3,7 @@ import "./Map.css";
 import Mapa from "./Mapa";
 
 const Map = () => {
+
   return (
     <div className="MapContainer">
       <div className="MapSections">

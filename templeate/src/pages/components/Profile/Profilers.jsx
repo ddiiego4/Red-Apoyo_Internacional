@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { Modal, Modalreserva } from '../Modals/ModalReserva/Modalreserva';
-import Mispublicasiones from '../UsrProfile/More/Publicasiones/Mispublicasiones';
 import Comentarios from './More/Comentarios/Comentarios';
 import Reserv from '../Reservar/Reserv';
 import getUserData from "../../helpers/helpgetdatausr"
@@ -14,10 +12,11 @@ import Loader from '../Loader/Loader';
 
 
 import axios from 'axios';
-
+import Cookies from 'universal-cookie';
 
 
 const Profilers = ({ profile_Data, setSState }) => {
+  const cookies = new Cookies()
   const [load, setLoad] = useState(true);
   const [noload, setnoload] = useState(false);
 
@@ -28,19 +27,12 @@ const Profilers = ({ profile_Data, setSState }) => {
 
 
 
-  const data_parsed = undefined;
-  var [n_pub, setn_pub] = useState(0);
   const [db, setdb] = useState([]);
-  const [ownerdata, setownerdata] = useState([])
   const urldb = `https://isnft-prod.azurewebsites.net/api/houses/${window.location.pathname.split("/")[2]}`
-  var urlowner = ""
-
-  const [modal, setmodal] = useState({ id: null, modal: false });
+  // eslint-disable-next-line
   const [datmodal, setdatmoda] = useState([]);
-
-
-
-
+  // eslint-disable-next-line
+  var urlowner = ""
 
 
   function veryfy(estado) {
@@ -71,7 +63,11 @@ const Profilers = ({ profile_Data, setSState }) => {
 
   }
 
+
   useEffect(() => {
+    if (!cookies.get('id_usr_tok')) {
+      window.location.href = "/";
+    }
     axios
       .get(urldb)
       .then(res => {
@@ -90,17 +86,6 @@ const Profilers = ({ profile_Data, setSState }) => {
   }, []);
 
 
-  function veryfymodal(item) {
-    if (modal.modal) {
-      if (modal.id === item.id) {
-        setmodal({ id: item.id, modal: false })
-      }
-    } else {
-      setmodal({ otr: modal, id: item.id, modal: true })
-      setdatmoda({ datos_modal: item, setm: setmodal });
-    }
-  }
-
 
   function getUserDataload(idowner) {
     setLoad(true);
@@ -112,7 +97,7 @@ const Profilers = ({ profile_Data, setSState }) => {
 
   return (
     <div className='usr_profiles_container'>
-      {load && (<Loader></Loader>)
+      {load && (<div style={{ marginBottom: "16%", marginTop: "16%" }}> <Loader></Loader></div>)
       }
       {
         noload && (
@@ -227,7 +212,7 @@ const Profilers = ({ profile_Data, setSState }) => {
               <div className="menu-perfil">
                 <ul>
                   <li onClick={() => veryfy("Comentarios")}>
-                    <a href="#publicaciones" title="">
+                    <a href="" title="">
                       <i className="icono-perfil fas fa-bullhorn">
                       </i>
                       Comentarios
@@ -236,7 +221,7 @@ const Profilers = ({ profile_Data, setSState }) => {
                   </li>
                   {
                     <li onClick={() => veryfy("Fotos")}>
-                      <a href="#ariendos" title="">
+                      <a href="" title="">
                         <i className="icono-perfil fas fa-info-circle">
                         </i>Fotos
                         <HiOutlinePhotograph style={{ marginLeft: "8px" }} ></HiOutlinePhotograph>
@@ -260,7 +245,7 @@ const Profilers = ({ profile_Data, setSState }) => {
                   Fotos.susFotos && <>
 
                     {db && <> <h1>Fotos</h1>
-                      <div style={{background: "#4c47471c",boxShadow:"0px 0px 28px -6px", width: "80%",margin: "auto",borderRadius: "16px 319px 27px 171px", opacity: ".8"}} >
+                      <div style={{ background: "#4c47471c", boxShadow: "0px 0px 28px -6px", width: "80%", margin: "auto", borderRadius: "16px 93px 27px 82px", opacity: ".8" }} >
                         {
                           (
 
@@ -269,9 +254,10 @@ const Profilers = ({ profile_Data, setSState }) => {
                               db.photos.map(
                                 (item, index) => (
                                   <div key={index}>
-                                    
-                                    <img style={{ width: "50%" 
-                                  }} alt={item.url} src={item.url} ></img>
+
+                                    <img style={{
+                                      width: "50%", margin: "10px", borderRadius: "10px 10px 10px 10px"
+                                    }} alt={item.url} src={item.url} ></img>
                                   </div>
                                 )
                               )

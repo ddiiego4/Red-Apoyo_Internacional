@@ -50,6 +50,7 @@ const UsrProfiles = () => {
   useEffect(() => {
 
     var num_user = window.location.pathname.split("/")[2]
+  
 
     axios
       .get(urldb)
@@ -93,7 +94,7 @@ const UsrProfiles = () => {
   return (
 
     <div className='usr_profiles_container'>
-      {load && (<Loader></Loader>)
+      {load && ( <div  style={{marginBottom:"16%", marginTop:"16%"}}> <Loader></Loader></div>)
       }
       {
         noload && (

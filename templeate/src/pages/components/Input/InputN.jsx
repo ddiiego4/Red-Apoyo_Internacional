@@ -1,11 +1,11 @@
 import React from 'react'
 
 
-const InputN = ({atributo, Error_H, parametro , icon}) => {
+const InputN = ({ atributo, Error_H, parametro, icon }) => {
     return (
         <div className="input-groupp mb-3">
-                    
-            <input 
+
+            <input
                 id={atributo.id}
                 name={atributo.name}
                 placeholder={atributo.placeholder}
@@ -16,8 +16,8 @@ const InputN = ({atributo, Error_H, parametro , icon}) => {
                 onChange={atributo.onChange}
                 autoComplete="off"
                 value={atributo.value}
-                
-             />
+
+            />
         </div>
     )
 };

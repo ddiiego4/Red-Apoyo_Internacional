@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import axios from "axios";
+import Cookies from "universal-cookie";
 import "./Profile.css"
 
 import Profilers from "./Profilers";
 import Headerns from "../Header/Headerns";
 import Footer from "../Footer/Footer";
 
+const cookies = new Cookies()
 export default class Profile extends Component {
   state = {
     Houses: [],
@@ -13,13 +15,16 @@ export default class Profile extends Component {
   }
 
   componentDidMount() {
+    if (!cookies.get('id_usr_tok')) {
+      window.location.href = "/";
+    }
     const id_house = window.location.pathname.split("/")[2]
     const DbUrl = `https://isnft-prod.azurewebsites.net/api/houses/${id_house}`;
     console.log(DbUrl)
     axios
-    .get(DbUrl)
+      .get(DbUrl)
       .then(res => {
-       this.setState({ Houses: res.data, load: false });
+        this.setState({ Houses: res.data, load: false });
       });
   }
 
@@ -37,7 +42,7 @@ export default class Profile extends Component {
           <br />
           <div>
             <div className="Sections">
-              <Profilers profile_Data={this.state.Houses}  />
+              <Profilers profile_Data={this.state.Houses} />
             </div>
           </div>
           <div></div>

@@ -1,7 +1,6 @@
 import { Component } from "react";
 import "../Modals.css"
-import ModalReserva from "./ModalReserva";
-
+import ModalComentar from "./ModalComentar";
 /**
  * Use this modal reser in the hooks
  * Declare Hook 
@@ -13,9 +12,7 @@ import ModalReserva from "./ModalReserva";
  * 
  */
 
-
-
-export class Modalreserva extends Component {
+export default class Modalcomentar extends Component {
 
 
     constructor(props, setmodal) {
@@ -26,7 +23,7 @@ export class Modalreserva extends Component {
         return (
             <>
                 <div className="container_modal">
-                    <ModalReserva datos={this.props} />
+                    <ModalComentar datos={this.props} />
                 </div>
             </>
         );

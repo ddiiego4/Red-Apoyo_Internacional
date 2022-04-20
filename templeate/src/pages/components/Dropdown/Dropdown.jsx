@@ -29,7 +29,7 @@ const Dropdown = () => {
                 </div>
                 <div>
                     <div>
-                        <button className="btn btns_drop" type="button" onClick={() => window.location.href=`/usrprofile/${localStorage.getItem("id_usr")}`}>Cuenta</button>
+                        <button className="btn btns_drop" type="button" onClick={() => window.location.href = `/usrprofile/${localStorage.getItem("id_usr")}`}>Cuenta</button>
                     </div>
                 </div>
                 <div>

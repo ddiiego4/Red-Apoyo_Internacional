@@ -18,21 +18,17 @@ export default class Hous extends Component {
 
     componentDidMount() {
         axios.get(DbUrl2).then(res => {
-            //console.log("VIene la data");
-            //console.log(res.data.result);
             this.setState({ Houses: res.data, load: false });
         });
     }
-
-
     render() {
 
         return (
             <>
                 <div className="Houses_Container">
                     <div className="Houses">
-                        
-                            {this.state.load && (<><div className="load_all_houses"><Loader /><Message Mensaje={"Buscaremos por ti...."} ></Message>
+
+                        {this.state.load && (<><div style={{ marginTop: "17%" }} className="load_all_houses"><Loader /><Message Mensaje={"Buscaremos por ti...."} ></Message>
                         </div></>)}
 
                         <div>

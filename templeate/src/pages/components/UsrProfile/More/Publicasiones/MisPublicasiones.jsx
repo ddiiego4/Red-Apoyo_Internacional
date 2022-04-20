@@ -37,7 +37,6 @@ const MisPublicasiones = ({ dataausr }) => {
 
 
 
-
     }
 
   return (

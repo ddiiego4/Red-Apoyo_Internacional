@@ -1,5 +1,4 @@
-import React , {useState}from "react";
-
+import React, { useState } from "react";
 import Input from "../Input/Input";
 import Title from "../Title/Title";
 import Loader from "../Loader/Loader";
@@ -7,7 +6,6 @@ import logo_CEIBA from "../../../assets/img/LOgo_text.png";
 import "./Form.css";
 import Select from "../Select/Select";
 import SelectLi from "../Select/SelectLi";
-
 
 const Form = ({
   handleSubmit,
@@ -41,7 +39,7 @@ const Form = ({
               />
               <br></br>
             </div>
-            
+
 
             <div className="In_puts">
               <Input
@@ -83,7 +81,7 @@ const Form = ({
             </div>
           </div>
           <div className="row">
-          <div className="In_puts">
+            <div className="In_puts">
               <Input
                 atributo={{
                   id: "user_email",
@@ -98,10 +96,10 @@ const Form = ({
             <div className="In_puts" name="country" onChange={handleChange}>
               <Select />
               <br></br>
-            <div className="In_puts" name="cityId" onChange={handleChange}>
-               <SelectLi />
-              <br></br>
-            </div>
+              <div className="In_puts" name="cityId" onChange={handleChange}>
+                <SelectLi />
+                <br></br>
+              </div>
             </div>
 
             <div className="In_puts">
@@ -117,7 +115,7 @@ const Form = ({
               <br></br>
             </div>
             <div className="In_puts">
-              <input className="dat_in" type="date" name="birthday" onChange={handleChange}></input> 
+              <input className="dat_in" type="date" name="birthday" onChange={handleChange}></input>
               <br></br>
             </div>
           </div>
