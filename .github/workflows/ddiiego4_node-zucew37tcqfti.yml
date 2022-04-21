@@ -21,11 +21,12 @@ jobs:
         with:
           node-version: '14'
 
-      - name: npm install, build, and test
+      - name: dict npm install, build, and test
         run: |
-          npm install templeate/
-          npm run build templeate/ --if-present
-          npm run test templeate/ --if-present
+          cd templeate
+          npm install
+          npm run build --if-present
+          npm run test --if-present
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
